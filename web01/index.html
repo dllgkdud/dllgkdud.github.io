@@ -9,69 +9,73 @@
     <!-- 오픈그래프(방문) -->
     <!-- 파비콘(바로가기-smartphone 연동) -->
     <!-- 각종 플러그인과 설정 파일 -->
+    <link rel="stylesheet" href="./css/reset2.css">
     <style>
-    .pic { width: 500px; }
+    /* header.css */
+    .hd { width: 100%; background-color: #fff; }
+    .logo { display: block; width: 149px; height: auto; float: left; margin-top: 10px; margin-bottom: 10px; }
+    .logo img { width: 149px; height: auto; }
     </style>
 </head>
 <body>
     <div class="wrap">
         <header class="hd">
-            <a href="dllgkdud.github.io" class="logo"><img src="img/logo.png" alt="main_logo"></a>
-            <nav class="tnb">
-                <ul>
+            <div class="hd_wrap">
+                <a href="dllgkdud.github.io" class="logo"><img src="./img/logo.png" alt="main_logo"></a>
+                <nav class="tnb">
                     <a href="login.html">login</a>
                     <a href="member.html">member</a>
                     <a href="sitemap.html">sitemap</a>
-                </ul>
-            </nav>
-            <nav class="gnb">
-                <ul>
-                <li class="item1">
-                    <a href="vehicle.html" class="dp1">vehicle</a>
-                    <ul class="sub">
-                        <li><a href="model.html">model</a></li>
-                        <li><a href="cons.html">consult</a></li>
-                        <li><a href="guide.html">guide</a></li>
+                </nav>
+                <nav class="gnb">
+                    <ul>
+                        <li class="item1">
+                            <a href="vehicle.html" class="dp1">vehicle</a>
+                            <ul class="sub">
+                                <li><a href="model.html">model</a></li>
+                                <li><a href="cons.html">consult</a></li>
+                                <li><a href="guide.html">guide</a></li>
+                            </ul>
+                        </li>
+                        <li class="item2">
+                            <a href="info.html" class="dp1">info</a>
+                            <ul class="sub">
+                                <li><a href="place.html">place</a></li>
+                                <li><a href="trial.html">trial</a></li>
+                                <li><a href="acc.html">accident space</a></li>
+                            </ul>
+                        </li>
+                        <li class="item3">
+                            <a href="member.html" class="dp1">membership</a>
+                            <ul class="sub">
+                                <li><a href="blue.html">bluemembers</a></li>
+                                <li><a href="man.html">manage</a></li>
+                                <li><a href="carp.html">carpay</a></li>
+                            </ul>
+                        </li>
+                        <li class="item4">
+                            <a href="serv.html" class="dp1">service</a>
+                            <ul class="sub">
+                                <li><a href="faq.html">faq</a></li>
+                                <li><a href="inq.html">inquiry</a></li>
+                                <li><a href="noti.html">notice</a></li>
+                            </ul>
+                        </li>
+                        <li class="item5">
+                            <a href="comp.html" class="dp1">company</a>
+                            <ul class="sub">
+                                <li><a href="idea.html">idea</a></li>
+                                <li><a href="net.html">network</a></li>
+                                <li><a href="res.html">sales_result</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li class="item2">
-                    <a href="info.html" class="dp1">info</a>
-                    <ul class="sub">
-                        <li><a href="place.html">place</a></li>
-                        <li><a href="trial.html">trial</a></li>
-                        <li><a href="acc.html">accident space</a></li>
-                    </ul>
-                </li>
-                <li class="item3">
-                    <a href="member.html" class="dp1">membership</a>
-                    <ul class="sub">
-                        <li><a href="blue.html">bluemembers</a></li>
-                        <li><a href="man.html">manage</a></li>
-                        <li><a href="carp.html">carpay</a></li>
-                    </ul>
-                </li>
-                <li class="item4">
-                    <a href="serv.html" class="dp1">service</a>
-                    <ul class="sub">
-                        <li><a href="faq.html">faq</a></li>
-                        <li><a href="inq.html">inquiry</a></li>
-                        <li><a href="noti.html">notice</a></li>
-                    </ul>
-                </li>
-                <li class="item5">
-                    <a href="comp.html" class="dp1">company</a>
-                    <ul class="sub">
-                        <li><a href="idea.html">idea</a></li>
-                        <li><a href="net.html">network</a></li>
-                        <li><a href="res.html">sales_result</a></li>
-                    </ul>
-                </li>
-                </ul>
-            </nav>
+                </nav>
+            </div>
         </header>
         <div class="content">
             <fiure class="vs">
-                <video src="mainvideo3.mp4" autoplay muted loop></video>
+                <video src="./mainvideo3.mp4" autoplay muted loop></video>
             </fiure>
             <section class="page" id="page1">
                 <div class="wrap">
@@ -86,21 +90,21 @@
                             <ul class="ico_lst">
                                 <li>
                                     <a href="" class="ico1">
-                                        <bgi src="img/ico/sedan.png" alt=""></bgi>
+                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
                                         <h3 class="cate_tit">신차 구매 혜택</h3>
                                         <p class="cate_com">Hyundai Mobility카드만의 구매 프로그램</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" class="ico2">
-                                        <bgi src="img/ico/sedan.png" alt=""></bgi>
+                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
                                         <h3 class="cate_tit">H데이 이벤트</h3>
                                         <p class="cate_com">가을 맞이 상품 최대 67% 할인, 3일간 진행되는 0원 응모딜까지 만나보세요!</p>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" class="ico3">
-                                        <bgi src="img/ico/sedan.png" alt=""></bgi>
+                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
                                         <h3 class="cate_tit">캐스퍼 출시 1주년 차량용품 할인 이벤트</h3>
                                         <p class="cate_com">캐스퍼 차량용품 최대 20% 할인!</p>
                                     </a>
@@ -115,63 +119,63 @@
                     <h1 class="page_tit">lineup</h1>
                     <ul class="pic_lst">
                         <li>
-                            <a href=""><img src="img/pic1.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic1.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">avante</h3>
                                 <p class="pic_com">change life</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic2.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic2.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">sonata</h3>
                                 <p class="pic_com">keep growing</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic3.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic3.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">grandeur</h3>
                                 <p class="pic_com">redefine success</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic4.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic4.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">santafe</h3>
                                 <p class="pic_com">family suv</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic5.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic5.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">tucson</h3>
                                 <p class="pic_com">spcial place</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic6.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic6.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">ioniq</h3>
                                 <p class="pic_com">make the world</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic7.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic7.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">casper</h3>
                                 <p class="pic_com">case by casper</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic8.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic8.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">county</h3>
                                 <p class="pic_com">more confidently</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="img/pic9.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/pic9.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">universe</h3>
                                 <p class="pic_com">around the world</p>
