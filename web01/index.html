@@ -16,12 +16,14 @@
     .logo { display: block; width: 149px; height: auto; float: left; margin-top: 10px; margin-bottom: 10px; }
     .logo img { width: 149px; height: auto; }
     .tnb { float: right; margin-top: 40px; margin-bottom: 40px; }
-    .tnb a { font-size: 12px; padding: 0 15px; color: #767676}
+    .tnb a { padding: 0 15px; font-size: 12px; font-weight: 100; color: #767676}
+    .tnb a:hover { font-weight: 200; color: #444; }
     .gnb { clear: both; }
     .gnb li { float:left; }
-    .gnb li .dp1 { display: block; height: 70px; font-size: 16px; color: #444; }
+    .gnb li .dp1 { display: block; height: 50px; line-height: 50px; font-size: 16px; color: #444; }
     .gnb li .sub { display: none; font-size: 14px; }
     .gnb > ul > li { width: 20%; text-align: center; }
+    .gnb li:hover { font-weight: bolder; }
     </style>
 </head>
 <body>
@@ -216,7 +218,7 @@
         </div>
         <footer class="ft">
             <div class="ft_wrap">
-                <div class="ft_logo"><img src="img/logo_mobile.png" alt="foot_logo"></div>
+                <div class="ft_logo"><img src="./img/logo_mobile.png" alt="foot_logo"></div>
                 <div class="ft_mid">
                     <nav class="fnb">
                         <a href="copyright.html">copyright guide</a>
