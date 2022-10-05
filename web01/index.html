@@ -12,18 +12,25 @@
     <link rel="stylesheet" href="./css/reset2.css">
     <style>
     /* header.css */
-    .hd { width: 100%; background-color: #fff; border-bottom: 1px solid #e5e5e5; }
-    .logo { display: block; width: 149px; height: auto; float: left; margin-top: 10px; margin-bottom: 10px; }
-    .logo img { width: 149px; height: auto; }
+    .hd { width: 100%; background-color: #fff; }
+    .logo { display: block; width: 149px; height: auto; float: left; margin: 10px 0; }
+    .logo img { display: block; width: 100%; height: auto; }
     .tnb { float: right; margin-top: 40px; margin-bottom: 40px; }
-    .tnb a { padding: 0 15px; font-size: 12px; font-weight: 100; color: #767676}
-    .tnb a:hover { font-weight: 200; color: #444; }
-    .gnb { clear: both; }
-    .gnb li { float:left; }
-    .gnb li .dp1 { display: block; height: 50px; line-height: 50px; font-size: 16px; color: #444; }
-    .gnb li .sub { display: none; font-size: 14px; }
-    .gnb > ul > li { width: 20%; text-align: center; }
-    .gnb li:hover { font-weight: bolder; }
+    .tnb a { padding: 0 15px; font-size: 12px; font-weight: 100; color: #888}
+    .tnb a:hover { font-weight: 300; color: #444; }
+    .gnb { clear: both; width: 100%; border-top: 1px solid #eee; }
+
+    /* clear-fix 처리 */
+    .gnb:after { content:""; display: block; clear: both; }
+    .gnb > ul:after { content:""; display: block; clear: both; }
+
+    .gnb .dp1 { display: block; height: 50px; line-height: 50px; color: #444; font-size: 16px; }
+    .gnb li:hover .dp1 { border-bottom: 3px solid #007fa8; }
+    .gnb .sub { display: none; width: 100%; height: auto; font-size: 14px; background-color: #fff; }
+    .gnb:hover li .sub { display: block; }
+    .gnb li .sub li { clear: both; height: 30px; line-height: 30px; }
+    .gnb > ul > li { float:left; width: 20%; text-align: center; }
+
     </style>
 </head>
 <body>
@@ -128,63 +135,63 @@
                     <h1 class="page_tit">차종 라인업</h1>
                     <ul class="pic_lst">
                         <li>
-                            <a href=""><img src="./img/pic1.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/avante.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">avante</h3>
                                 <p class="pic_com">change life</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic2.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/sonata.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">sonata</h3>
                                 <p class="pic_com">keep growing</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic3.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/grandeur.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">grandeur</h3>
                                 <p class="pic_com">redefine success</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic4.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/santafe.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">santafe</h3>
                                 <p class="pic_com">family suv</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic5.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/palisade.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">tucson</h3>
+                                <h3 class="pic_tit">palisade</h3>
                                 <p class="pic_com">spcial place</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic6.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/staria-lounge.png" alt="" class="pic"></a>
+                            <div class="hv_box">
+                                <h3 class="pic_tit">staria</h3>
+                                <p class="pic_com">life space</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href=""><img src="./img/ioniq6.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">ioniq</h3>
                                 <p class="pic_com">make the world</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic7.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/casper.png" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">casper</h3>
                                 <p class="pic_com">case by casper</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/pic8.jpg" alt="" class="pic"></a>
-                            <div class="hv_box">
-                                <h3 class="pic_tit">county</h3>
-                                <p class="pic_com">more confidently</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href=""><img src="./img/pic9.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/universe.jpg" alt="" class="pic"></a>
                             <div class="hv_box">
                                 <h3 class="pic_tit">universe</h3>
                                 <p class="pic_com">around the world</p>
