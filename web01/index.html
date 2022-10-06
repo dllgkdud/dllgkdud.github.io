@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hyundai</title>
     <!-- 메타포(검색엔진) -->
+    <meta name="description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
+    <mata name="keywords" content="현대, 현대차, 현대자동차, hyundai, 승용, SUV, 트럭, 전기차, 친환경차, 수소차, 아반떼, 쏘나타, 소나타, 그랜저, 베뉴, 코나, 투싼, 
+    싼타페, 산타페, 싼타페하이브리드, 팰리세이드, 펠리세이드, 스타리아, 넥쏘, 아이오닉, 아이오닉5, 아이오닉6,포터, 특장차, 벨로스터, 엔라인, NLINE, 캐스퍼, 
+    마이현대, 현대샵, myhyundai, hyundaishop, 블루멤버스, 현대디지털키, 현대이벤트, 수리, 정비, 현대정비센터, 현대자동차서비스센터, 현대자동차견적, 현대차사양, 현대차가격, 현대차사양조회">
     <!-- 오픈그래프(방문) -->
+    <meta property="og:site_name" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
+    <meta property="og:title" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
+    <meta property="og:image" content="./img/main_logo.png">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
     <!-- 파비콘(바로가기-smartphone 연동) -->
     <!-- 각종 플러그인과 설정 파일 -->
     <link rel="stylesheet" href="./css/reset2.css">
@@ -34,7 +45,8 @@
     .gnb li .sub li a { display: block; background-color: #fff; color: #444; font-size: 14px; 
     text-indent: 2em; white-space: nowrap; text-overflow: ellipsis; }
     .gnb li .sub li:hover a { color: #444 }
-
+    
+    /* content.css */
     .vs { clear: both; width: 100%; height: auto; overflow: hidden; }
     .vdo1 { display:block; width:100%; height:auto; }
     .page { clear:both; width: 100%; }
@@ -48,12 +60,59 @@
     .lst li.right { float: right; width: 330px; height: 450px; }
     .ico_lst { clear: both; }
     .ico_lst li a { display: block; background-repeat: no-repeat; background-position: 0 center; background-size: auto 80%; padding-left: 55px; }
-    .ico_lst li a.ico1 { background-image: url("./img/ico/credit-card.png"); }
-    .ico_lst li a.ico2 { background-image: url("./img/ico/sale.png"); }
-    .ico_lst li a.ico3 { background-image: url("./img/ico/sedan-front.png"); }
+    .ico_lst li a.ico1 { background-image: url("./img/ico/ico_purchase.png"); }
+    .ico_lst li a.ico2 { background-image: url("./img/ico/ico_benefit.png"); }
+    .ico_lst li a.ico3 { background-image: url("./img/ico/ico_manage.png"); }
     .cate_tit { color: #444; font-size: 20px; padding-bottom: 0.5em;}
     .cate_com { color: #444; font-size: 18px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+    #page2 { background-color: #fff; }
+    .pic_lst { clear: both; width: 100%; }
+    .pic_lst:after { content: ""; display: block; clear: both; }
+    .pic_lst li { float: left; position: relative; margin-bottom: 40px; }
+    .pic_lst li a { display: block; width: 400px; height: 214px; }
+    .pic_lst li a img { display: block; width: 400px; margin-right: 30px; transition-duration: 0.8s; }
+    .pic_lst li a:hover img { margin-left: -30px; }
+    .pic_lst li a.hv_box { width: 400px; height: 214px; position: absolute; top: 0; left: 0; z-index: 10; transition-duration: 0.8s; }
+    .pic_lst li a:hover hv_box { opacity: 1; }
+    .pic_tit { position: absolute; top: 30px; left: 30px; font-size: 20px; }
+    .pic_com { position: absolute; top: 180px; left: 30px; font-size: 20px; color: #007fa8; text-shadow: 0 0 3px #fff; }
+
+    #page3 { background-repeat: no-repeat; background-size: cover; background-position: center center; overflow: hidden; }
+    #page3 .page_wrap { width: 100% }
+    .circle_lst { clear: both; width: 1800px; }
+    .circle_lst li { width: 180px; height: 180px; position: relative; border-radius: 90px; overflow: hidden; background-color: #fff; }
+    .circle_lst.lst2 li { float: right; }
+    .circle_lst li a { display: block; width: 100%; height: 100%; }
+    .circle_lst li a img { position: absolute; top: 50%; left: 33px; z-index: 10; margin-top: -20px; }
+    
+    /* footer.css */
+    .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; }
+    .ft_wrap { clear: both; width: 1200%; margin: 0; padding: 60px 50px }
+    .ft_wrap:after { content: ""; display: block; clear: both; }
+    .ft_logo { float: left; width: 150px; }
+    .ft_mid { float: left; width: 800px; }
+    .fnb { clear: both; }
+    .fnb a { color: #999; font-size: 13px; padding-right: 50px; }
+    .fnb a.few { color: #fff; }
     </style>
+    <script>
+     $(document).ready(function(){
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=600){
+                $(".hd").css("position","fixed");
+            } else {
+                $(".hd").css("position","absolute");
+            }
+        });
+        $
+        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+        $lst1_obj = $(".circle_lst li").clone();
+        $(".circle_lst.lst2").append($lst1_obj);
+    });
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -156,64 +215,64 @@
                         <li>
                             <a href=""><img src="./img/avante.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">avante</h3>
-                                <p class="pic_com">change life</p>
+                                <h3 class="pic_tit">아반떼</h3>
+                                <p class="pic_com">Change life</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/sonata.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">sonata</h3>
-                                <p class="pic_com">keep growing</p>
+                                <h3 class="pic_tit">쏘나타</h3>
+                                <p class="pic_com">Keep growing</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/grandeur.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">grandeur</h3>
-                                <p class="pic_com">redefine success</p>
+                                <h3 class="pic_tit">그랜저</h3>
+                                <p class="pic_com">Redefine success</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/santafe.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">santafe</h3>
-                                <p class="pic_com">family suv</p>
+                                <h3 class="pic_tit">싼타페</h3>
+                                <p class="pic_com">Family suv</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/palisade.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">palisade</h3>
-                                <p class="pic_com">spcial place</p>
+                                <h3 class="pic_tit">팰리세이드</h3>
+                                <p class="pic_com">Spcial place</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/staria-lounge.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">staria</h3>
-                                <p class="pic_com">life space</p>
+                                <h3 class="pic_tit">스타리아</h3>
+                                <p class="pic_com">Safe in your life</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/ioniq6.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">ioniq6</h3>
-                                <p class="pic_com">make the world</p>
+                                <h3 class="pic_tit">아이오닉6</h3>
+                                <p class="pic_com">Make the world</p>
                             </div>
                         </li>
                         <li>
                             <a href=""><img src="./img/casper.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">casper</h3>
-                                <p class="pic_com">case by casper</p>
+                                <h3 class="pic_tit">캐스퍼</h3>
+                                <p class="pic_com">Case by casper</p>
                             </div>
                         </li>
                         <li>
-                            <a href=""><img src="./img/universe.jpg" alt="" class="pic"></a>
+                            <a href=""><img src="./img/universe.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">universe</h3>
-                                <p class="pic_com">around the world</p>
+                                <h3 class="pic_tit">유니버스</h3>
+                                <p class="pic_com">Around the world</p>
                             </div>
                         </li>
                     </ul>
@@ -222,34 +281,34 @@
             <section class="page" id="page3">
                 <div class="page_wrap">
                     <h1 class="page_tit">제휴사</h1>
-                    <ul class="circle lst">
-                        <li><a href=""><img src="img/company-01.png" alt="partners1"></a></li>
-                        <li><a href=""><img src="img/company-02.png" alt="partners2"></a></li>
-                        <li><a href=""><img src="img/company-03.png" alt="partners3"></a></li>
-                        <li><a href=""><img src="img/company-04.png" alt="partners4"></a></li>
-                        <li><a href=""><img src="img/company-05.png" alt="partners5"></a></li>
-                        <li><a href=""><img src="img/company-06.png" alt="partners6"></a></li>
-                        <li><a href=""><img src="img/company-07.png" alt="partners7"></a></li>
-                        <li><a href=""><img src="img/company-08.png" alt="partners8"></a></li>
-                        <li><a href=""><img src="img/company-09.png" alt="partners9"></a></li>
-                        <li><a href=""><img src="img/company-10.png" alt="partners10"></a></li>
-                        <li><a href=""><img src="img/company-11.png" alt="partners11"></a></li>
-                        <li><a href=""><img src="img/company-12.png" alt="partners12"></a></li>
-                        <li><a href=""><img src="img/company-13.png" alt="partners13"></a></li>
-                        <li><a href=""><img src="img/company-14.png" alt="partners14"></a></li>
-                        <li><a href=""><img src="img/company-15.png" alt="partners15"></a></li>
+                    <ul class="circle_lst">
+                        <li><a href=""><img src="img/company-01.png" alt="partners1" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-02.png" alt="partners2" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-03.png" alt="partners3" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-04.png" alt="partners4" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-05.png" alt="partners5" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-06.png" alt="partners6" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-07.png" alt="partners7" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-08.png" alt="partners8" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-09.png" alt="partners9" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-10.png" alt="partners10" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-11.png" alt="partners11" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-12.png" alt="partners12" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-13.png" alt="partners13" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-14.png" alt="partners14" class="thumb"></a></li>
+                        <li><a href=""><img src="img/company-15.png" alt="partners15" class="thumb"></a></li>
                     </ul>
                 </div>
             </section>
         </div>
         <footer class="ft">
             <div class="ft_wrap">
-                <div class="ft_logo"><img src="./img/logo_mobile.png" alt="foot_logo"></div>
+                <div class="ft_logo"><img src="./img/logo_footer.png" alt="foot_logo"></div>
                 <div class="ft_mid">
                     <nav class="fnb">
-                        <a href="copyright.html">copyright guide</a>
-                        <a href="policy.html">primary policy</a>
-                        <a href="TOS.html">terms of service</a>
+                        <a href="copyright.html">저작권안내</a>
+                        <a href="policy.html" class="few">개인정보 처리방침</a>
+                        <a href="TOS.html">이용약관</a>
                         <p class="addr">고객센터 : 080-600-6000(승용), 080-200-6000(상용)</p>
                         <p class="copyright">COPYRIGHT ⓒ HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.</p>
                     </nav>
