@@ -13,24 +13,46 @@
     <style>
     /* header.css */
     .hd { width: 100%; background-color: #fff; }
+    .hd_wrap { width: 1200px; margin: 0 auto; }
     .logo { display: block; width: 149px; height: auto; float: left; margin: 10px 0; }
     .logo img { display: block; width: 100%; height: auto; }
-    .tnb { float: right; margin-top: 40px; margin-bottom: 40px; }
+    .tnb { float: right; margin: 30px; }
     .tnb a { padding: 0 15px; font-size: 12px; font-weight: 100; color: #888}
     .tnb a:hover { font-weight: 300; color: #444; }
-    .gnb { clear: both; width: 100%; border-top: 1px solid #eee; }
-
+    .gnb { float: left; width: 700px; margin: 20px; }
+    
     /* clear-fix 처리 */
     .gnb:after { content:""; display: block; clear: both; }
     .gnb > ul:after { content:""; display: block; clear: both; }
-
-    .gnb .dp1 { display: block; height: 50px; line-height: 50px; color: #444; font-size: 16px; }
+    .gnb > ul > li { float:left; width: 20%; height: 50px; line-height: 50px; position: relative; }
+    .gnb .dp1 { display: block; text-align: center; color: #444; font-size: 16px; }
     .gnb li:hover .dp1 { border-bottom: 3px solid #007fa8; }
-    .gnb .sub { display: none; width: 100%; height: auto; font-size: 14px; background-color: #fff; }
+    .gnb .sub { display: none; width: 100%; height: auto; background-color: #fff; 
+    position: absolute; top: 70px; left: 0; z-index: 100; border-top: 1px solid #eee; }
     .gnb:hover li .sub { display: block; }
-    .gnb li .sub li { clear: both; height: 30px; line-height: 30px; }
-    .gnb > ul > li { float:left; width: 20%; text-align: center; }
+    .gnb li .sub li { clear: both; height:40px; line-height: 30px; }
+    .gnb li .sub li a { display: block; background-color: #fff; color: #444; font-size: 14px; 
+    text-indent: 2em; white-space: nowrap; text-overflow: ellipsis; }
+    .gnb li .sub li:hover a { color: #444 }
 
+    .vs { clear: both; width: 100%; height: auto; overflow: hidden; }
+    .vdo1 { display:block; width:100%; height:auto; }
+    .page { clear:both; width: 100%; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    #page1, #page3 { background-color: #f6f3f2; }
+    .page_tit { text-align: center; font-size: 44px; padding-top: 0.83em; padding-bottom: 0.83em; }
+    .lst { clear: both; width: 1200px; }
+    .lst:after { content: ""; display: block; clear: both; }
+    .lst li { margin-bottom: 40px; }
+    .lst li.left { float: left; width: 800px; height: 450px;}
+    .lst li.right { float: right; width: 330px; height: 450px; }
+    .ico_lst { clear: both; }
+    .ico_lst li a { display: block; background-repeat: no-repeat; background-position: 0 center; background-size: auto 80%; padding-left: 55px; }
+    .ico_lst li a.ico1 { background-image: url("./img/ico/credit-card.png"); }
+    .ico_lst li a.ico2 { background-image: url("./img/ico/sale.png"); }
+    .ico_lst li a.ico3 { background-image: url("./img/ico/sedan-front.png"); }
+    .cate_tit { color: #444; font-size: 20px; padding-bottom: 0.5em;}
+    .cate_com { color: #444; font-size: 18px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
     </style>
 </head>
 <body>
@@ -91,37 +113,34 @@
         </header>
         <div class="content">
             <fiure class="vs">
-                <video src="./mainvideo3.mp4" autoplay muted loop></video>
+                <video src="./mainvideo3.mp4" autoplay muted loop class="vdo1"></video>
             </fiure>
             <section class="page" id="page1">
-                <div class="wrap">
+                <div class="page_wrap">
                     <h1 class="page_tit">소식</h1>
                     <ul class="lst">
                         <li class="left">
-                            <iframe name=vid2 id=vid2 width="700" height="298" src="https://www.youtube.com/embed/iWLKx3TnIcs" 
-                            title="Hyundai N & Peaches. | ChildreN's Day Teaser | 현대자동차" frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            <iframe name=vdo2 id=vdo2 width="800" height="450" src="https://www.youtube.com/embed/-oQVy8MvizQ"
+                            title="Hyundai N | 현대 N X SURFYY BEACH  | 현대자동차" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </li>
                         <li class="right">
                             <ul class="ico_lst">
                                 <li>
-                                    <a href="" class="ico1">
-                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
+                                    <a href="" alt="bgi" class="ico1">
                                         <h3 class="cate_tit">신차 구매 혜택</h3>
                                         <p class="cate_com">Hyundai Mobility카드만의 구매 프로그램</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="ico2">
-                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
+                                    <a href="" alt="bgi" class="ico2">
                                         <h3 class="cate_tit">H데이 이벤트</h3>
                                         <p class="cate_com">가을 맞이 상품 최대 67% 할인, 3일간 진행되는 0원 응모딜까지 만나보세요!</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="ico3">
-                                        <bgi src="./img/ico/sedan.png" alt="bgi"></bgi>
-                                        <h3 class="cate_tit">캐스퍼 출시 1주년 차량용품 할인 이벤트</h3>
+                                    <a href="" alt="bgi" class="ico3">
+                                        <h3 class="cate_tit">캐스퍼 출시 1주년 할인이벤트</h3>
                                         <p class="cate_com">캐스퍼 차량용품 최대 20% 할인!</p>
                                     </a>
                                 </li>
@@ -179,7 +198,7 @@
                         <li>
                             <a href=""><img src="./img/ioniq6.png" alt="" class="pic"></a>
                             <div class="hv_box">
-                                <h3 class="pic_tit">ioniq</h3>
+                                <h3 class="pic_tit">ioniq6</h3>
                                 <p class="pic_com">make the world</p>
                             </div>
                         </li>
@@ -201,7 +220,7 @@
                 </div>
             </section>
             <section class="page" id="page3">
-                <div class="wrap">
+                <div class="page_wrap">
                     <h1 class="page_tit">제휴사</h1>
                     <ul class="circle lst">
                         <li><a href=""><img src="img/company-01.png" alt="partners1"></a></li>
