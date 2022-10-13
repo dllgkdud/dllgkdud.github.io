@@ -2,12 +2,12 @@
 
 .hd_wrap { width: 100%; margin: 0; display: block; position: relative; }
 .hd_wrap:hover { position: absolute; top: 0; left: 0; z-index: 98; width: 100%; height: 250px; background-color: #ccc; }
-.logo { display: block; width: 166px; height: auto; float: left; margin: 20px 0; }
+.logo { display: block; width: 166px; height: auto; float: left; margin: 20px 10px; }
 .logo img { display: block; width: 149px; height: auto; }
 .tnb { float: right; margin: 20px; }
 .tnb a { padding: 0.8em; font-size: 14px; color: #888; }
 .tnb a:hover { color: #444; font-weight: 600; text-decoration: underline; }
-.gnb { float: left; width: 710px; margin-left: 50px; position: relative; }
+.gnb { float: left; width: 710px; margin-left: 40px; position: relative; }
 .gnb:after { content: ""; display: block; clear: both; }
 .gnb > ul:after { content: ""; display: block; clear: both; }
 .gnb > ul > li { float: left; width: 20%; line-height: 60px; position: relative; }
