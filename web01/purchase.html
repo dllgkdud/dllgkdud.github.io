@@ -129,6 +129,12 @@ $(document).ready(function(){
                     </select>
                 </div>
             </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_tit">모델</h2>
+                </div>
+            </section>
+        </div>
         <div class="content" id="page2">
             <figure class="vs">
                 <img src="./img/bg_visual.png" alt=""></img>
@@ -136,8 +142,8 @@ $(document).ready(function(){
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a>
-                    <select name="sel2" id="sel2" class="sel"></select>
-                    <option>구매정보</option>
+                    <select name="sel2" id="sel2" class="sel">
+                        <option>구매정보</option>
                         <option value="network.html#page1">네트워크</option>
                         <option value="membership.html#page1">멤버십</option>
                         <option value="service.html#page1">고객지원</option>
@@ -150,6 +156,11 @@ $(document).ready(function(){
                     </select>
                 </div>
             </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_tit">전시장</h2>
+                </div>
+            </section>
         </div>
         <div class="content" id="page3">
             <figure class="vs">
@@ -158,20 +169,25 @@ $(document).ready(function(){
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a>
-                    <select name="sel3" id="sel3"></select>
-                </div>
-                <option>구매정보</option>
+                    <select name="sel3" id="sel3" class="sel">
+                        <option>구매정보</option>
                         <option value="network.html#page1">네트워크</option>
                         <option value="membership.html#page1">멤버십</option>
                         <option value="service.html#page1">고객지원</option>
                         <option value="company.html#page1">회사소개</option>
                     </select> &gt
-                <select name="opt" id="sel3">
-                    <option>블루멤버스</option>
-                    <option value="membership.html#page2">차량관리</option>
-                    <option value="membership.html#page3">카페이</option>
-                </select>
+                    <select name="opt" id="sel3">
+                        <option>블루멤버스</option>
+                        <option value="membership.html#page2">차량관리</option>
+                        <option value="membership.html#page3">카페이</option>
+                    </select>
+                </div>
             </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_tit">블루멤버스</h2>
+                </div>
+            </section>
         </div>
         <div class="content" id="page4">
             <figure class="vs">
@@ -180,19 +196,25 @@ $(document).ready(function(){
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a>
-                    <select name="sel4" id="sel4"></select>
-                </div>
-                <option>구매정보</option>
+                    <select name="sel4" id="sel4" class="sel">
+                        <option>구매정보</option>
                         <option value="network.html#page1">네트워크</option>
                         <option value="membership.html#page1">멤버십</option>
                         <option value="service.html#page1">고객지원</option>
                         <option value="company.html#page1">회사소개</option>
-                <select name="opt" id="sel4">
-                    <option>FAQ</option>
-                    <option value="service.html#page2">문의</option>
-                    <option value="service.html#page3">공지사항</option>
-                </select>
+                    </select> &gt
+                    <select name="opt" id="sel4">
+                        <option>FAQ</option>
+                        <option value="service.html#page2">문의</option>
+                        <option value="service.html#page3">공지사항</option>
+                    </select>
+                </div>
             </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_tit">FAQ</h2>
+                </div>
+            </section>
         </div>
         <div class="content" id="page5">
             <figure class="vs">
@@ -201,41 +223,32 @@ $(document).ready(function(){
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a>
-                    <select name="sel5" id="sel5"></select>
-                </div>
-                <option>구매정보</option>
+                    <select name="sel5" id="sel5" class="sel">
+                        <option>구매정보</option>
                         <option value="network.html#page1">네트워크</option>
                         <option value="membership.html#page1">멤버십</option>
                         <option value="service.html#page1">고객지원</option>
                         <option value="company.html#page1">회사소개</option>
+                </select> &gt
                 <select name="opt" id="sel5">
                     <option>사업이념</option>
                     <option value="company.html#page2">사업망</option>
                     <option value="company.html#page3">판매실적</option>
                 </select>
             </div>
+            <section class="page">
+                <div class="page_wrap">
+                    <h2 class="page_tit">사업이념</h2>
+                </div>
+            </section>
         </div>
         <script>
         var opt = document.getElementById("sel1");
-        var opt = document.getElementById("sel2");
-        var opt = document.getElementById("sel3");
-        var opt = document.getElementById("sel4");
-        var opt = document.getElementById("sel5");
-        sel1.addEventListener("change", function(){
-            location.href = this.value;
-        });
-        sel2.addEventListener("change", function(){
-            location.href = this.value;
-        });
-        sel3.addEventListener("change", function(){
-            location.href = this.value;
-        });
-        sel4.addEventListener("change", function(){
-            location.href = this.value;
-        });
-        sel5.addEventListener("change", function(){
-            location.href = this.value;
-        });
+        for(var i=0;i<opt.length;i++){
+            opt[i].addEventListener("change", function(){
+                location.href = this.value;
+            });
+        }
         </script>
         <footer class="ft">
             <div class="ft_wrap">
