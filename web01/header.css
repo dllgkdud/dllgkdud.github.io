@@ -7,7 +7,7 @@
 .tnb { float: right; margin: 20px; }
 .tnb a { padding: 0.8em; font-size: 14px; color: #888; }
 .tnb a:hover { color: #444; font-weight: 600; text-decoration: underline; }
-.gnb { float: left; width: 710px; margin-left: 40px; position: relative; }
+.gnb { float: left; width: 710px; margin-left: 50px; position: relative; }
 .gnb:after { content: ""; display: block; clear: both; }
 .gnb > ul:after { content: ""; display: block; clear: both; }
 .gnb > ul > li { float: left; width: 20%; line-height: 60px; position: relative; }
