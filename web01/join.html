@@ -23,19 +23,24 @@
     <link rel="stylesheet" href="header.css">
 </head>
 <style>
-.hd { width: 100%; height: 50px; position: fixed; }
+.hd { width: 100%; height: 50px; position: absolute; top: 0; left: 0; z-index: 99; }
 
+.content { display: block; }
 .vs { clear: both; width: 100%; height: 350px; overflow: hidden; }
 .vs img { display: block; width: 100%; height: auto; }
 .bread { clear: both; width: 100%; height: auto; }
 .bread_fr { width: 1200px; margin: 20px 30px; }
-[name=opt].sel { color: #007fa8; }
+.sel { color: #007fa8; }
 .page { clear: both; width: 100%; min-height: 100vh; }
 .page:after { content: ""; display: block; clear: both; }
-.page_wrap { width: 1200px; margin: auto; }
 
-.content { display: none; }
-.content:target { display: block; }
+.page_wrap { width: 1200px; margin: 0 auto; }
+.page_tit { padding-top: 1em; text-align: center; }
+.agree { width: 1000px; white-space: pre-wrap; margin: 10px auto; padding: 10px; border: 1px solid #ddd; height: 300px; overflow-y: auto; }
+.btn { width: 1000px; padding: 30px 90px; }
+.btn1 { display: block; width: 400px; height: 50px; border: 1px solid #186ea3; background-color: #3387bd; cursor:pointer; line-height: 10px; 
+font-weight: 600; text-decoration: underline; float: left; margin: 10px 300px; }
+.btn1:hover { background-color: #186ea3; }
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
@@ -116,18 +121,18 @@ $(document).ready(function(){
         </header>
         <div class="content">
             <figure class="vs">
-                <img src="./img/bg1_visual.png" alt=""></img>
+                <img src="./img/bg4_visual.png" alt="">
             </figure>
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.html" class="home">홈</a> &gt;
-                    <span class="sel">이용약관</span>
+                    <span class="sel">회원가입</span>
                 </div>
             </div>
             <section class="page">
                 <div class="page_wrap">
-                    <h2 class="page_tit">이용 약관 동의</h2>
-                    <h6 class="page_sub">보안성과 편의성이 강화된 현대자동차 통합계정 약관에 동의해주세요.</h6>
+                    <h3 class="page_tit">이용 약관 동의</h3>
+                    <h5 class="page_tit">보안성과 편의성이 강화된 현대자동차 통합계정 약관에 동의해주세요.</h5>
                     <div class="agree">
 제1장 총칙
 
@@ -225,7 +230,7 @@ $(document).ready(function(){
 
 제3장 콘텐츠이용계약
 
-제13조("콘텐츠"의 내용 등의 게시)① "회사"는 다음 사항을 해당 "콘텐츠"의 이용초기화면이나 그 포장에 "이용자"가 알기 쉽게 표시합니다. 
+제13조("콘텐츠"의 내용 등의 게시)   ① "회사"는 다음 사항을 해당 "콘텐츠"의 이용초기화면이나 그 포장에 "이용자"가 알기 쉽게 표시합니다. 
 1. "콘텐츠"의 명칭 또는 제호 
 
 2. "콘텐츠"의 제작 및 표시 연월일 
@@ -425,12 +430,25 @@ $(document).ready(function(){
 
 제33조(분쟁의 해결) "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다. 
                     </div>
-                    <div class="agree_btn">
-                        <input type="checkbox" id="ck1" name="ck1"><label for="ck1">* 약관에 동의합니다.</label>
-                        <button></button></div>
+                    <div class="btn">
+                        <input type="checkbox" id="ck1" name="ck1"> <label for="ck1">전체 약관에 동의합니다.</label><br><br>
+                        <button type="button" id="btn1" class="btn1">동의</button>
+                    </div>
+                    <script>
+                    var btn1 = document.getElementById("btn1");
+                    var ck1 = document.getElementById("ck1");
+                    btn1.addEventListener("click", function(){
+                        if(ck1.checked) {
+                            location.href = "joinForm.html";
+                        } else {
+                            alert("필수약관에 동의하지 않으셨습니다.");
+                            return;
+                        }
+                    });    
+                    </script>
                 </div>
             </section>
-        </div> 
+        </div>
         <footer class="ft">
             <div class="ft_wrap">
                 <div class="ft_logo"><img src="./img/logo_footer.png" alt=""></div>
