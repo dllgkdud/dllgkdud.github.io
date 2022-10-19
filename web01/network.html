@@ -30,13 +30,17 @@
 .bread { clear: both; width: 100%; height: auto; line-height: 30px; border-bottom:2px solid #eee; }
 .bread_fr { width: 1200px; margin: 20px 30px; }
 [name=opt].sel { color: #007fa8; }
-.page { clear: both; width: 100%; min-height: 100vh; }
+.page { clear: both; width: 1200px; min-height: 100vh; }
 .page:after { content: ""; display: block; clear: both; }
-.page_wrap { width: 1200px; margin: auto; }
+.page_wrap { width: 100%; margin: 0 auto; }
 
 .content { display: none; }
 .content:target { display: block; }
 .page_tit { padding-top: 1em; }
+
+.pic { display: block; }
+.pic img { margin: 50px 350px; }
+
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
@@ -139,6 +143,64 @@ $(document).ready(function(){
             <section class="page">
                 <div class="page_wrap">
                     <h2 class="page_tit">전시장</h2>
+                    <div class="place">
+                        <ul class="place_lst">
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-1.jpg"></div>
+                                    <div class="pic_tit"><span class="pic_name">전주서부지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-2.jpg"></div>
+                                    <div class="pic_tit"><span class="pic_name">강남청담지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-3.jpg"></div>
+                                    <div class="pic_tit"><span class="pic_name">경주지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-4.jpg"></div>
+                                    <div class="pic_tit"><span class="pic_name">상무지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-5.png"></div>
+                                    <div class="pic_tit"><span class="pic_name">명지국제지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-6.png"></div>
+                                    <div class="pic_tit"><span class="pic_name">올림픽지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-7.png"></div>
+                                    <div class="pic_tit"><span class="pic_name">수원시청지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-8.png"></div>
+                                    <div class="pic_tit"><span class="pic_name">김포지점</span></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic"><img src="./img/2-9.png"></div>
+                                    <div class="pic_tit"><span class="pic_name">평택지점</span></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
@@ -166,8 +228,10 @@ $(document).ready(function(){
             <section class="page">
                 <div class="page_wrap">
                     <h2 class="page_tit">판매/시승</h2>
-                    <img src="./img/testdriving.png" alt="">
-                    <img src="./img/testdriving2.png" alt="">
+                    <div class="pic">
+                        <img src="./img/testdriving.png" alt="">
+                        <img src="./img/testdriving2.png" alt="">
+                    </div>
                 </div>
             </section>
         </div>

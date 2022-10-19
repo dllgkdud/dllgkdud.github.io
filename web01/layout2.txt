@@ -29,7 +29,14 @@
     <script src="./js/respond.min.js"></script>
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="./css/reset2.css">
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width:100%; }
+    ul { list-style:none; }
+    a { text-decoration: none; }
+
+    .wrap { width: 100%; clear:both; }
+    </style>
     <link rel="stylesheet" href="header.css">
     <style>
     /* header.css */
@@ -52,6 +59,85 @@
     .to_top:hover { background-color: deepskyblue; }
     .to_top.on { visibility: visible; }
 
+    .pro_ra { display:none; }
+    .ban1 { clear:both; width: 1200px; height:auto; margin:0 auto; overflow-x:hidden; }
+    .ban_img_fr { clear:both; width:5000px; margin-left: 0; transition-duration:0.6s; }
+    #pro_ra1:checked ~ .ban_img_fr { margin-left: 0; }
+    #pro_ra2:checked ~ .ban_img_fr { margin-left:-1200px; }
+    #pro_ra3:checked ~ .ban_img_fr { margin-left:-2400px; }
+    .ban_img_fr:after { content:""; display:block; clear:both; }
+    .ban_img_fr li { float:left; width: 1200px; margin: 0; }
+    .ban_img_fr li img { display:block; width: 100%; height: auto; margin: 0; }
+    .btn_fr { clear:both; }
+    .btn_group.left { float:left; }
+    .btn_group.left label { display:block; width: 20px; height: 20px; background-color:transparent; border:2px solid red; text-indent:-9999px; margin: 8px; cursor:pointer; }
+    #pro_ra1:checked ~ .btn_fr .btn_group.left li.item1 label { background-color:deeppink; }
+    #pro_ra2:checked ~ .btn_fr .btn_group.left li.item2 label { background-color:deeppink; }
+    #pro_ra3:checked ~ .btn_fr .btn_group.left li.item3 label { background-color:deeppink; } 
+    .btn_group.right { float:right; }
+    .btn_group li { float:left; margin: 8px;}
+    .btn_group.right li a { display:block; width: 32px; height: 32px; background-repeat: no-repeat; background-size:32px 32px; }
+    .btn_group.right li.item1 a { background-image: url("./img/icon/ico_naver.png");}
+    .btn_group.right li.item2 a { background-image: url("./img/icon/ico_kakao.png"); }
+    .btn_group.right li.item3 a { background-image: url("./img/icon/ico_url.png"); }
+    .btn_group.right li.item4 a { background-image: url("./img/icon/ico_facebook.png"); }
+
+    .real_con_fr { clear:both; margin:24px auto; border-top:3px solid #ececec; }
+    .real_con_fr:after { content:""; clear:both; display:block; }
+    .art { width: 600px; float:left; min-height:500px; padding-top: 32px; }
+    .art:after { content:""; clear:both; display:block; }
+    .art_com { clear:both; margin-top: 18px; }
+    .art_com span { display:block; background-repeat: no-repeat; background-position:left center; background-size:24px auto; height: 32px; line-height: 32px; padding-left: 30px; float:left; margin-right: 48px; }
+    .art_com span.item1 { background-image: url("./img/icon/ico_view.svg"); }
+    .art_com span.item2 { background-image: url("./img/icon/ico_time.svg"); }
+    .art_com span.item3 { background-image: url("./img/icon/ico_bookmark-s.svg"); }
+    .place_com { clear:both; margin-top: 18px; }
+    .place_com span { clear:both; display:block; line-height: 32px; }
+    .place_com span:before { content:"."; padding-right: 6px; }
+    .place_com span.item1:before { content:".업종 : ";}
+    .place_com span.item2:before { content:".기술 : ";}
+    .place_com span.item3:before { content:".설치지역 : ";}
+
+    .tit1 { font-size: 1.875rem;   font-weight: 700; margin-bottom: 24px; }
+    .tit2 { font-size: 2.375rem;    font-weight: 700; margin-bottom: 12px; padding-bottom: 24px; }
+    .tit3 { margin-bottom: 6px;    font-size: 1rem;    color: #999; padding-bottom: 12px; }
+    .com1 { font-size:1.2rem; padding-bottom: 48px; }
+
+    .tb_fr { clear:both; width: 1200px; border-top:3px solid #ececec; padding-top: 60px;
+    padding-bottom: 60px; }
+    .tb_fr:after {  content:""; clear:both; display:block; }
+    .pro_image { float:left; width: 600px; }
+    .pro_data { float:right; width: 600px; }
+    .tb td { line-height: 2; padding-bottom: 20px; position:relative; 
+    border-bottom:2px solid #ccc; padding-top: 12px; }
+
+    .cate_tit { color:navy; }
+    .color_list { clear:both; }
+    .color_list li { height:58px; float:left; margin: 5px; }
+    .loc_area { position:absolute; right:0px; top:0px;  }
+    .loc_area a { display:block; width: 40px;     height: 40px;
+    border: 0 none;    cursor: pointer;      outline: 0; float:left; margin-left: 8px; }
+    .loc_area a.heart { background: url("./img/icon/ico_panel.png") no-repeat -218px -209px; }
+    .loc_area a.net { background: url("./img/icon/ico_panel.png") no-repeat -306px -209px; }
+
+    .stararea { display:block; width: 112px; height: 24px; overflow:hidden; float:left; }
+    .starpoint { display:block; background-image:url("./img/star1.png"); background-repeat: no-repeat; background-size:125px auto; width: 125px; height: 24px; }
+    .useafter { display:block; font-size:12px; font-weight:500;  color:deepskyblue; float:left; margin-left: 18px; line-height: 24px; margin-top:4px; }
+    .ori_price { font-size:14px; text-decoration: line-through; font-weight: 300; }
+    .ori_price:before { content:"("; }
+    .ori_price:after { content:")"; }
+    .res_price { display:block; font-size: 20px;    line-height: 21px; color:#ae0000; font-weight: 700; }
+    .srbay { font-size:12px; color:deepskyblue; }
+    .gift { border:1px solid #ccc; background-color:#ececec; padding: 1.5rem; margin-top: 14px; }
+    .sales_list { clear:both; padding-left: 24px; }
+    .sales_list li { position:relative; padding-left:10px; font-size:12px; }
+    .sales_list li:before { content:""; display:block; width: 5px; height: 5px; 
+border-radius:4px; background-color: #333; position:absolute; left:0; top:10px; }
+    
+    .in_data, .shopcut, .btn2 { display:block; float:left; width: 180px; line-height: 32px; text-align:center;  margin: 8px; outline:0; border:0; }
+    .btn2 { background-color: #333; color:#fff; cursor:pointer;  }
+    .shopcut { background-color: dodgerblue; color:#fff; height: 32px; cursor:pointer; }
+    .in_data { border:1px solid #ccc; }
     </style>
     <link rel="stylesheet" href="footer.css">
     <script>
@@ -70,28 +156,8 @@
         });
     });    
     </script>
-    <link href="http://apis.map.daum.net/favicon.ico" rel="shortcut icon"> 
-    <meta name="viewport" content="width=720">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Daum 지도 API">
-    <link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
-    
-    <style>
-    body { background:white; }
-    </style>
-    <script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
-    <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
 </head>
-<!--[if gte IE 10]><!-->
-    <body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
-<!--<![endif]-->
-<!--[if lte IE 7]>
-<body class="very_low web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
-<![endif]-->
-<!--[if lte IE 9]>
-<body class="low web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
-<![endif]-->
+<body>
 <div class="wrap">
     <header class="hd">
         <div class="hd_wrap">
@@ -164,102 +230,151 @@
                     <option value="install.html#page1">설치사례</option>
                 </select> &gt; 
                 <select name="sel2" id="sel2" class="sel">
-                    <option>인사말</option>
-                    <option value="company.html#page2">회사연혁</option>
-                    <option value="company.html#page3">오시는길</option>
+                    <option>제품</option>
+                    <option value="layout4.html#pro1">제품1</option>
+                    <option value="layout4.html#pro2">제품2</option>
+                    <option value="layout4.html#pro3">제품3</option>
                 </select>
             </div>
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">SVG MAP</h2>
+                <h2 class="page_title">제품 상세 페이지</h2>
                 <div class="con_wrap">
-                    <div id="daum_map_area">
-                        <div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; ">
-
+                    <figure class="ban1">
+                        <input type="radio" name="pro_ban" id="pro_ra1" class="pro_ra" checked>
+                        <input type="radio" name="pro_ban" id="pro_ra2" class="pro_ra">
+                        <input type="radio" name="pro_ban" id="pro_ra3" class="pro_ra">
+                        <ul class="ban_img_fr">
+                            <li><img src="./img/pro1.jpg" alt="제품사진1"></li>
+                            <li><img src="./img/pro2.jpg" alt="제품사진2"></li>
+                            <li><img src="./img/pro3.jpg" alt="제품사진3"></li>
+                        </ul>
+                        <div class="btn_fr">
+                            <ul class="btn_group left">
+                                <li class="item1"><label for="pro_ra1">1</label></li>
+                                <li class="item2"><label for="pro_ra2">2</label></li>
+                                <li class="item3"><label for="pro_ra3">3</label></li>
+                            </ul>
+                            <ul class="btn_group right">
+                                <li class="item1"><a href=""></a></li>
+                                <li class="item2"><a href=""></a></li>
+                                <li class="item3"><a href=""></a></li>
+                                <li class="item4"><a href=""></a></li>
+                            </ul>
                         </div>
-                        
-                        <script>
-                        
-                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-                        
-                            mapOption = { 
-                                //위도:37.658827995980204, 경도: 126.77512489202539 
-                                center: new daum.maps.LatLng(37.658827995980204, 126.77512489202539), // 지도의 중심좌표
-                        
-                                level: 5 // 지도의 확대 레벨
-                        
-                            };
-                        
-                         
-                        
-                        var map = new daum.maps.Map(mapContainer, mapOption);
-                        
-                         
-                        
-                        // 마커가 표시될 위치입니다 
-                        
-                        var markerPosition  = new daum.maps.LatLng(37.658827995980204, 126.77512489202539); 
-                        
-                         
-                        
-                        // 마커를 생성합니다
-                        
-                        var marker = new daum.maps.Marker({
-                        
-                            position: markerPosition
-                        
-                        });
-                        
-                         
-                        
-                        // 마커가 지도 위에 표시되도록 설정합니다
-                        
-                        marker.setMap(map);
-                        
-                         
-                        
-                        var iwContent = '<div style="padding:5px;">일산동구청<br><a href="" style="color:blue" target="_blank"></a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-                        
-                            iwPosition = new daum.maps.LatLng(36.3491563,127.3776857); //인포윈도우 표시 위치입니다
-                        
-                         
-                        
-                        // 인포윈도우를 생성합니다
-                        
-                        var infowindow = new daum.maps.InfoWindow({
-                        
-                            position : iwPosition, 
-                        
-                            content : iwContent 
-                        
-                        });
-                        
-                          
-                        
-                        // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-                        
-                        infowindow.open(map, marker);
-                        
-                        </script>
-                        
-                        <script type="text/javascript" src="http://m1.daumcdn.net/tiara/js/td.min.js"></script>
-                        
-                        <script type="text/javascript">
-                        
-                        var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
-                        
-                            window._tiq = _tiq;
-                        
-                            _tiq.push(['__trackPageview']);
-                        
-                        </script>
-                        
-                        <script type="text/javascript" src="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.js">
-                        
-                        </script>
+                    </figure>
+                    <div class="real_con_fr">
+                        <article class="art left">
+                            <h2 class="art_tit">디스플레이앤라이프</h2>
+                            <p class="art_com">
+                                <span class="item1">592</span>
+                                <span class="item2">2021.07.18</span>
+                                <span class="item3">1</span>
+                            </p>
+                            <p class="place_com">
+                                <span class="item1">기업</span>
+                                <span class="item2">투명OLED</span>
+                                <span class="item3">서울</span>
+                            </p>
+                        </article>
+                        <article class="art right">
+                            <h3 class="tit1">불가리(BVLGARI)</h3>
+                            <h2 class="tit2">예술의전당 불가리 컬러 전시회</h2>
+                            <h3 class="tit3">고객의 의뢰 배경과 요청 사항</h3>
+                            <p class="com1">불가리의 주요 아이덴티티인 컬러 테마를 전 세계에서 가장 먼저 한국에서 선보이는 전시회로 각 테마별 불가리의 헤리티지 컬렉션 및 LG 올레드 디스플레이로 표현된 다양한 디지털 작품이 전시될 예정입니다. 멀티룸에 설치될 곡면 OLED 비디오월에 투명 OLED를 조합하여 화려한 컬러의 콘텐츠를 생동감 있고 입체적으로 표현하고 싶습니다.</p>
+                            <h3 class="tit3">파트너사가 프로젝트에 담은 전문성</h3>
+                            <p class="com1">곡면 OLED 비디오월 전면에 투명 OLED 2x2 비디오월 4셋트, 총 16대를 설치하였습니다. 베젤 최소화, 케이블 외곽 프레임 매립, 구조물 천장에 구동보드 배치를 통해 투명 OLED의 특징인 개방감을 살렸습니다. 투명 OLED 창문을 통해 '불가리의 계단' 컨텐츠의 화려함과 예술적인 감각을 돋보이게 하면서 방문객들이 오갈 수 있도록 설치하여 직접 투명 디스플레이를 느낄 수 있는 기회를 제공하였습니다.</p>
+                        </article>
                     </div>
                 </div>
+            </div>
+            <div class="page_wrap">
+                <article class="tb_fr">
+                    <div class="pro_image">
+                        <img src="./img/pic/data1.png" alt="상품이미지" class="pro_pic">
+                    </div>
+                    <form action="" class="pro_data">
+                        <table class="tb">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h4 class="cate_tit">르엠마</h4>
+                                        <h2 class="pro_tit">르엠마 글리터 롱니트 겨울 원피스</h2>
+                                        <div class="starating">
+                                            <span class="stararea">
+                                                <span class="starpoint"></span>
+                                            </span>
+                                            <span class="useafter">232개 상품평</span>
+                                        </div>
+                                        <div class="loc_area">
+                                            <a href="" class="heart"></a>
+                                            <a href="" class="net"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="price">
+                                            <span class="sales_percent">44%</span>
+                                            <span class="ori_price">59,600원</span>
+                                            <span class="res_price">32,900원</span>
+                                            <span class="send_point">최대 1,645원 적립</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="srbay">무료배송</p>
+                                        <p class="srbay_detail">
+                                            <span class="srbay_time">내일(목) 10/20 도착</span>
+                                            <span class="srbay_order"> (8시간 8분  내 주문 시 / 서울⋅경기 기준)</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="pro_size">사이즈: Free(one size)</p>
+                                        <p class="pro_color"><strong>색상</strong> : 브라운</p>
+                                        <ul class="color_list">
+                                            <li><img src="./img/pic/data_thumb1.png" alt=""></li>
+                                            <li><img src="./img/pic/data_thumb2.png" alt=""></li>
+                                            <li><img src="./img/pic/data_thumb3.png" alt=""></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="sr_cash">캐시적립 혜택 상세보기 | 최대 1,645원 적립</p>
+                                        <div class="gift">
+                                            <p>쿠페이 머니 결제 시 1% 적립</p>
+                                            <p>[로켓와우 + 쿠페이 계좌이체] 결제 시 2% 적립</p>
+                                            <p>[로켓와우 + 쿠페이 머니] 결제 시 4% 추가적립 <strong>3053일 남음</strong></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="number" name="amount" id="amount" class="in_data" placeholder="구매 수량 입력">
+                                        <a href="" class="shopcut" class="btn1">장바구니 담기</a>
+                                        <input type="submit" value="바로 구매" class="btn2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul class="sales_list">
+                                            <li>의류 핏: 기본핏</li>
+                                            <li>색상계열: 브라운계열</li>
+                                            <li>상의 사이즈: 여성 FREE (one size)</li>
+                                            <li>사용계절: 겨울용</li>
+                                            <li>쿠팡상품번호: 2317972828 - 4001310420</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </article>
             </div>
         </section>
     </div>

@@ -1,94 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com</title>
     <meta name="description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
-    <mata name="keywords" content="현대, 현대차, 현대자동차, hyundai, 승용, SUV, 트럭, 전기차, 친환경차, 수소차, 아반떼, 쏘나타, 소나타, 그랜저, 베뉴, 코나, 투싼, 
+    <mata name="keywords"
+        content="현대, 현대차, 현대자동차, hyundai, 승용, SUV, 트럭, 전기차, 친환경차, 수소차, 아반떼, 쏘나타, 소나타, 그랜저, 베뉴, 코나, 투싼, 
     싼타페, 산타페, 싼타페하이브리드, 팰리세이드, 펠리세이드, 스타리아, 넥쏘, 아이오닉, 아이오닉5, 아이오닉6,포터, 특장차, 벨로스터, 엔라인, NLINE, 캐스퍼, 
     마이현대, 현대샵, myhyundai, hyundaishop, 블루멤버스, 현대디지털키, 현대이벤트, 수리, 정비, 현대정비센터, 현대자동차서비스센터, 현대자동차견적, 현대차사양, 현대차가격, 현대차사양조회">
 
-    <meta property="og:site_name" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
-    <meta property="og:title" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
-    <meta property="og:image" content="">
-    <meta property="og:image:width" content="">
-    <meta property="og:image:height" content="">
+        <meta property="og:site_name" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
+        <meta property="og:title" content="현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
+        <meta property="og:image" content="">
+        <meta property="og:image:width" content="">
+        <meta property="og:image:height" content="">
 
-    <script src="./js/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="./css/reset2.css">
-    <link rel="stylesheet" href="header.css">
+        <script src="./js/jquery-1.11.1.js"></script>
+        <link rel="stylesheet" href="./css/reset2.css">
+        <link rel="stylesheet" href="header.css">
 </head>
 <style>
-.hd { width: 100%; height: 50px; position: absolute; top: 0; left: 0; z-index: 99; }
+    .hd {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
 
-.content { clear: both; width: 100%; }
-.vs { clear: both; width: 100%; height: 100vh; overflow: hidden; }
-.vdo { display: block; width: 100%; height: auto; }
-.page { clear: both; width: 100%; }
-.page_wrap { width: 1200px; margin: 0 auto; }
-.page_tit { text-align: center; font-size: 44px; padding-top: 1.4em; padding-bottom: 1em; letter-spacing: 4px;  }
-.lst { clear: both; width: 1200px; }
-.lst li { margin-bottom: 40px; }
-.lst li:after { content: ""; display: block; clear: both; }
-.lst li.left { float: left; width: 803px; height: 452px; }
-.lst li.right { float: right; width: 350px; height: 452px; letter-spacing: -.4px; }
-.ico_lst { clear: both; width: 100%; overflow: hidden; }
-.ico_lst li a { display: block; background-repeat: no-repeat; background-position: 0 center; 
-background-size: auto 80%; padding-left: 50px; }
-.ico_lst li a.ico1 { background-image: url(./img/ico_purchase.png); }
-.ico_lst li a.ico2 { background-image: url(./img/ico_benefit.png); }
-.ico_lst li a.ico3 { background-image: url(./img/ico3_tiral.png); }
-.cate_tit { color: #444; font-size: 22px; }
-.cate_com { color: #444; font-size: 18px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .content {
+        clear: both;
+        width: 100%;
+    }
 
-#page2 { background-color: #f9f9f9; }
-.pic_lst { clear: both; width: 100%; padding-bottom: 80px; }
-.pic_lst::after { content: ""; display: block; clear: both; }
-.pic_lst li { float: left; margin-bottom: 40px; position: relative; }
-.pic_lst li a { display: block; width: 360px; margin-right: 40px; letter-spacing: -.4px; }
-.pic_lst li a img { display: block; width: 400px; margin-left: 40px; transition-duration:0.6s; }
-.pic_lst li a:hover img { margin-left: 0px; }
-.pic_lst li a .hv_box { width: 360px; height: 260px; position: absolute; top: 10px; left: 0; z-index: 91; 
-transition-duration: 0.6s; color: #fff; opacity: 0; background-color: transparent;}
-.pic_lst li a:hover .hv_box { opacity: 1; }
-.pic_tit { font-size: 22px; position: absolute; top: 0; left: 10px; color: #444; }
-.pic_com { font-size: 16px; position: absolute; top: 30px; left: 10px; color: #444; }
+    .vs {
+        clear: both;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
 
-#page3 { background-image: url(./img/hyundai-bts-back.jpg); background-repeat: no-repeat; background-size: cover; 
-background-position: center center; height: 100vh; overflow: hidden; }
-#page3 .page_wrap { width: 100%; }
-.circle_lst { clear: both; width: 4000px; }
-.circle_lst li { float: left; width: 180px; height: 180px; border-radius: 95px; background-color: #fff; 
-margin: 25px; overflow: hidden; position: relative; }
-.circle_lst.lst2 li { float: right; }
-.circle_lst li a { display: block; width: 100%; height: 100%; }
-.circle_lst li a img { display: block; width: 110px; height: auto; position: absolute; top: 55%; left: 35px; z-index: 90; margin-top: -30px; }
+    .vdo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-.ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
-.ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
+    .page {
+        clear: both;
+        width: 100%;
+    }
+
+    .page_wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page_tit {
+        text-align: center;
+        font-size: 44px;
+        padding-top: 1.4em;
+        padding-bottom: 1em;
+        letter-spacing: 4px;
+    }
+
+    .lst {
+        clear: both;
+        width: 1200px;
+    }
+
+    .lst li {
+        margin-bottom: 40px;
+    }
+
+    .lst li:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .lst li.left {
+        float: left;
+        width: 803px;
+        height: 452px;
+    }
+
+    .lst li.right {
+        float: right;
+        width: 350px;
+        height: 452px;
+        letter-spacing: -.4px;
+    }
+
+    .ico_lst {
+        clear: both;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .ico_lst li a {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        background-size: auto 80%;
+        padding-left: 50px;
+    }
+
+    .ico_lst li a.ico1 {
+        background-image: url("./img/ico_purchase.png");
+    }
+
+    .ico_lst li a.ico2 {
+        background-image: url("./img/ico_benefit.png");
+    }
+
+    .ico_lst li a.ico3 {
+        background-image: url("./img/ico3_tiral.png");
+    }
+
+    .cate_tit {
+        color: #444;
+        font-size: 22px;
+    }
+
+    .cate_com {
+        color: #444;
+        font-size: 18px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    #page2 {
+        background-color: #f9f9f9;
+    }
+
+    .pic_lst {
+        clear: both;
+        width: 100%;
+        padding-bottom: 80px;
+    }
+
+    .pic_lst::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .pic_lst li {
+        float: left;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .pic_lst li a {
+        display: block;
+        width: 360px;
+        margin-right: 40px;
+        letter-spacing: -.4px;
+    }
+
+    .pic_lst li a img {
+        display: block;
+        width: 400px;
+        margin-left: 40px;
+        transition-duration: 0.6s;
+    }
+
+    .pic_lst li a:hover img {
+        margin-left: 0px;
+    }
+
+    .pic_lst li a .hv_box {
+        width: 360px;
+        height: 260px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 91;
+        transition-duration: 0.6s;
+        color: #fff;
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    .pic_lst li a:hover .hv_box {
+        opacity: 1;
+    }
+
+    .pic_tit {
+        font-size: 22px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        color: #444;
+    }
+
+    .pic_com {
+        font-size: 16px;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        color: #444;
+    }
+
+    #page3 {
+        background-image: url(./img/hyundai-bts-back.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #page3 .page_wrap {
+        width: 100%;
+    }
+
+    .circle_lst {
+        clear: both;
+        width: 4000px;
+    }
+
+    .circle_lst li {
+        float: left;
+        width: 180px;
+        height: 180px;
+        border-radius: 95px;
+        background-color: #fff;
+        margin: 25px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .circle_lst.lst2 li {
+        float: right;
+    }
+
+    .circle_lst li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle_lst li a img {
+        display: block;
+        width: 110px;
+        height: auto;
+        position: absolute;
+        top: 55%;
+        left: 35px;
+        z-index: 90;
+        margin-top: -30px;
+    }
+
+    .ft {
+        clear: both;
+        width: 100%;
+        height: 200px;
+        background-color: #1c1b1b;
+        padding-bottom: 50px;
+    }
+
+    .ft_wrap {
+        clear: both;
+        width: 1200px;
+        padding: 60px 50px;
+    }
 </style>
 <script>
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var ht = $(window).height();
-        var tp = $(this).scrollTop();
-        if(tp>=600){
-            $(".hd").css("position","fixed");
-        } else {
-            $(".hd").css("position","absolute");
-        }
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if (tp >= 600) {
+                $(".hd").css("position", "fixed");
+            } else {
+                $(".hd").css("position", "absolute");
+            }
+        });
+        $
+        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+        $lst1_obj = $(".circle_lst li").clone();
+        $(".circle_lst.lst2").append($lst1_obj);
     });
-    $
-    $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
-    $lst1_obj = $(".circle_lst li").clone();
-    $(".circle_lst.lst2").append($lst1_obj);
-});    
 </script>
-    <link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="footer.css">
+
 <body>
     <div class="wrap">
         <header class="hd">
@@ -154,7 +358,10 @@ $(document).ready(function(){
                     <h1 class="page_tit">소식</h1>
                     <ul class="lst">
                         <li class="left">
-                            <iframe width="803" height="452" src="https://www.youtube.com/embed/iO7UNAYHBZY" title="N | N Universe | 현대자동차" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="803" height="452" src="https://www.youtube.com/embed/iO7UNAYHBZY"
+                                title="N | N Universe | 현대자동차" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </li>
                         <li class="right">
                             <ul class="ico_lst">
@@ -313,21 +520,25 @@ $(document).ready(function(){
                         <option value="https://www.hyundai-n.com/">N 브랜드</option>
                         <option value="https://gbic.hyundai.com/main.do">글로벌경영연구소</option>
                         <option value="https://motorstudio.hyundai.com/itg/ln/main.do?lang=ko">현대 모터스튜디오</option>
-                        <option value="https://kids.hyundai.com/index.kids;jsessionid=wDMzRJ1rajys6wT8Lj3avTevhGSoafX68bH0XxpyBlRUVEnwboL5yS0LaR8oHnwp.HWayKids_WAS02_servlet_engine1">키즈현대</option>
+                        <option
+                            value="https://kids.hyundai.com/index.kids;jsessionid=wDMzRJ1rajys6wT8Lj3avTevhGSoafX68bH0XxpyBlRUVEnwboL5yS0LaR8oHnwp.HWayKids_WAS02_servlet_engine1">
+                            키즈현대</option>
                         <option value="http://winwin.hyundai.com/coportal/?WT.ac=family_site_winwin">동반성장 사이트</option>
                         <option value="https://drivingexperience.hyundai.co.kr/kr/main">현대 드라이빙 아카데미</option>
                         <option value="https://collection.hyundai.com/">현대 컬렉션 온라인샵</option>
                         <option value="https://hear.hyundai.com/main/index.do">고객소통채널 H-ear</option>
-                        <option value="http://www.hyundai-motorsfc.com/?WT.ac=family_site_motorsfc">전북 현대모터스 축구단</option>
+                        <option value="http://www.hyundai-motorsfc.com/?WT.ac=family_site_motorsfc">전북 현대모터스 축구단
+                        </option>
                     </select>
                 </div>
                 <script>
-                function sel_link(sel){
-                    location.href = sel.value;
-                }
+                    function sel_link(sel) {
+                        location.href = sel.value;
+                    }
                 </script>
             </div>
         </footer>
-    </div> 
+    </div>
 </body>
+
 </html>

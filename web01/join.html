@@ -39,7 +39,7 @@
 .agree { width: 1000px; white-space: pre-wrap; margin: 10px auto; padding: 10px; border: 1px solid #ddd; height: 300px; overflow-y: auto; }
 .btn { width: 1000px; padding: 30px 90px; }
 .btn1 { display: block; width: 400px; height: 50px; border: 1px solid #186ea3; background-color: #3387bd; cursor:pointer; line-height: 10px; 
-font-weight: 600; text-decoration: underline; float: left; margin: 10px 300px; }
+font-weight: 600; text-decoration: underline; float: left; color: #fff; margin: 10px 300px; }
 .btn1:hover { background-color: #186ea3; }
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
@@ -441,7 +441,7 @@ $(document).ready(function(){
                         if(ck1.checked) {
                             location.href = "joinForm.html";
                         } else {
-                            alert("필수약관에 동의하지 않으셨습니다.");
+                            alert("필수 약관에 동의하지 않으셨습니다.");
                             return;
                         }
                     });    
