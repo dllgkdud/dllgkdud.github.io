@@ -23,24 +23,33 @@
     <link rel="stylesheet" href="header.css">
 </head>
 <style>
-.hd { width: 100%; height: 50px; position: fixed; }
+.hd { width: 100%; height: 50px; position: absolute; top: 0; left: 0; z-index: 999; }
 
 .vs { clear: both; width: 100%; height: 350px; overflow: hidden; }
 .vs img { display: block; width: 100%; height: auto; }
 .bread { clear: both; width: 100%; height: auto; line-height: 30px; border-bottom:2px solid #eee; }
 .bread_fr { width: 1200px; margin: 20px 30px; }
+.home { color: #222; }
 [name=opt].sel { color: #007fa8; }
-.page { clear: both; width: 1200px; min-height: 100vh; }
+.page { clear: both; width: 100%; min-height: 100vh; }
 .page:after { content: ""; display: block; clear: both; }
-.page_wrap { width: 100%; margin: 0 auto; }
+.page_wrap { display: block; width: 1200px; margin: 0 auto; }
 
 .content { display: none; }
 .content:target { display: block; }
 .page_tit { padding-top: 1em; }
+.place { clear: both; width: 100%; }
+.place_lst li { width: 30%; float: left; margin-bottom: 30px; position: relative;}
+.place_lst li a { display: block; clear: both; }
+.place_lst li a .pic_name { position: absolute; bottom: 50px; left: 35%; z-index: 87; font-size: 18px; background-size: 50%; background-color: #1c1b1b; color: #fff; }
 
-.pic { display: block; }
-.pic img { margin: 50px 350px; }
+.pic { display: block; width: 100%; height: auto; text-align: center; margin: 30px auto; }
 
+.page_con { display: block; margin: 50px auto; text-align: center; font-weight: 600; }
+.acc { clear: both; width: 100%; }
+.acc_wrap { display: block; width: 50%; height: auto; float: left; margin-bottom: 50px; position: relative; }
+.acc_tit { display: block; clear: both; margin-top: 30px; }
+.acc_con { display: block; clear: both; margin-top: 10px; }
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
