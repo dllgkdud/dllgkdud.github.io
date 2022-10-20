@@ -33,12 +33,15 @@
 [name=opt].sel { color: #007fa8; }
 .page { clear: both; width: 100%; min-height: 100vh; }
 .page:after { content: ""; display: block; clear: both; }
-.page_wrap { width: 1200px; margin: auto; }
+.page_wrap { width: 1200px; margin: auto; position: relative; }
 
 .content { display: none; }
 .content:target { display: block; }
+.page_wrap img { display: block; margin: 40px auto; }
 .page_tit { padding-top: 1em; font-weight: 600; padding: 50px 0; }
-.sub { display: block; width: 100%; height: auto; text-align: center; }
+.sub { display: block; width: 100%; height: 80px; text-align: center; }
+
+
 
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
@@ -145,10 +148,12 @@ $(document).ready(function(){
                         <h3 class="sub_tit">Management Philosophy</h3>
                         <p class="sub_con">창의적 사고와 끝없는 도전을 통해 새로운 미래를 창조함으로써 인류 사회의 꿈을 실현한다.</p>
                     </div>
+                    <img src="./img/arrowTop.jpg" alt="">
                     <div class="sub">
                         <h3 class="sub_tit">Vision</h3>
                         <p class="sub_con">자동차에서 삶의 동반자로</p>
                     </div>
+                    <img src="./img/arrowTop.jpg" alt="">
                     <div class="sub">
                         <img src="./img/management.jpg" alt="">
                     </div>
