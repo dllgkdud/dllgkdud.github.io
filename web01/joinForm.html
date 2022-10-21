@@ -35,11 +35,13 @@
 .page:after { content: ""; display: block; clear: both; }
 .page_wrap { width: 1200px; margin: auto; }
 
-.content { display: block; }
-.fm { width: 800px; height: 400px; border: 1px solid #ccc; margin: 10px auto; }
-.fm_lst { clear: both; }
-.fm_lst label { display: block; margin: 10px 40px; }
-.fm_lst input { display: block; width: 350px; height: 30px; padding-left: 0.8em; font-size: 14px; }
+.content { display: block; width: 100%; }
+.join { display: block; clear: both; text-align: center; }
+.fm { display: block; border: 1px solid #007fa8; margin: 50px 300px; padding: 50px; }
+.fm_lst th { display: block; margin: 15px; float: left; }
+.fm_lst td { display: block; float: right; padding: 10px 30px; }
+#id, #pw, #name, #email { clear: both; width: 280px; height: 30px; padding-left: 0.7em; font-size: 16px; }
+.fm_btn { display: block; }
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
@@ -159,12 +161,12 @@ $(document).ready(function(){
                                             <input type="email" id="email" name="email" class="info" required>
                                         </td>
                                     </tr>
-                                    <tr class="fm_btn">
-                                        <button type="reset" class="join_btn">취소</button>
-                                        <button type="submit" class="join_btn">회원가입</button>
-                                    </tr>
                                 </tbody>
                             </table>
+                            <div class="fm_btn">
+                                <button type="reset" class="join_btn">취소</button>
+                                <button type="submit" class="join_btn">회원가입</button>
+                            </div>
                         </form>
                     </div>
                 </div>
