@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>현대자동차 - 현대닷컴 | 대한민국 대표 자동차회사 hyundai.com</title>
     <meta name="description" content="현대자동차 공식 홈페이지 현대닷컴. 승용, SUV부터 전기차, 수소차까지. 대한민국 최고의 완성차 브랜드를 경험해보세요.">
-    <mata name="keywords" content="현대, 현대차, 현대자동차, hyundai, 승용, SUV, 트럭, 전기차, 친환경차, 수소차, 아반떼, 쏘나타, 소나타, 그랜저, 베뉴, 코나, 투싼, 
+    <meta name="keywords" content="현대, 현대차, 현대자동차, hyundai, 승용, SUV, 트럭, 전기차, 친환경차, 수소차, 아반떼, 쏘나타, 소나타, 그랜저, 베뉴, 코나, 투싼, 
     싼타페, 산타페, 싼타페하이브리드, 팰리세이드, 펠리세이드, 스타리아, 넥쏘, 아이오닉, 아이오닉5, 아이오닉6,포터, 특장차, 벨로스터, 엔라인, NLINE, 캐스퍼, 
     마이현대, 현대샵, myhyundai, hyundaishop, 블루멤버스, 현대디지털키, 현대이벤트, 수리, 정비, 현대정비센터, 현대자동차서비스센터, 현대자동차견적, 현대차사양, 현대차가격, 현대차사양조회">
 
@@ -23,31 +23,30 @@
     <link rel="stylesheet" href="header.css">
 </head>
 <style>
-.hd { width: 100%; height: 50px; position: fixed; }
+.hd { width: 100%; height: 50px; position: absolute; top: 0; left: 0; z-index: 999; }
 
+.content { display: block; }
 .vs { clear: both; width: 100%; height: 350px; overflow: hidden; }
 .vs img { display: block; width: 100%; height: auto; }
 .bread { clear: both; width: 100%; height: auto; }
 .bread_fr { width: 1200px; margin: 20px 30px; }
-[name=opt].sel { color: #007fa8; }
+.home { color: #222; }
+.sel { color: #007fa8; }
 .page { clear: both; width: 100%; min-height: 100vh; }
 .page:after { content: ""; display: block; clear: both; }
 .page_wrap { width: 1200px; margin: auto; }
 
-.content { display: block; }
-.frm { border:2px solid #333; padding: 24px; width: 580px; margin:50px auto; }
-.frm_tb { display:table; margin:40px auto;  }
-.frm_tb tr { display:table-row; }
-.frm_tb td, .frm_tb th { display:table-cell; }
-.frm_tb th { width:200px; height: 48px;  }
-.frm_tb td { width:300px; height: 48px; }
-.frm_tb label:before { content:"*"; }
-
-.in_dt { background-color:#fff; height:32px; line-height: 32px; width: 280px; 
-color:#f36; font-size:16px; text-indent:0.5em; }
-.in_btn { display:block; background-color:#333; min-width:120px; height: 32px; 
-line-height: 32px; border-radius:20px; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
-.in_btn:hover { background-color: deepskyblue; }
+.login_wrap { width: 550px; height: 600px; padding: 50px; margin: 0 auto; }
+.login_wrap .join_tit { margin-bottom: 20px; }
+.login_wrap #join_form { box-sizing: border-box; }
+.login { border: 1px solid #eee; padding: 60px; position: relative; }
+.login label { margin-right: 20px; line-height: 3; }
+.login input { width: 100%; height: 20px; margin-bottom: 10px; font-size: 14px; }
+.login button { width: 48%; height: 45px; font-weight: 600; cursor: pointer; }
+.login button[type="reset"] { position: absolute; bottom: -40px; left: 0; z-index: 50; background-color: #f6f3f2; }
+.login button[type="submit"] { position: absolute; bottom: -40px; right: 0; z-index: 50; color: #fff; background-color: #3387bd; }
+.login button[type="reset"]:hover { background-color: #e4dcd3; }
+.login button[type="submit"]:hover { background-color: #002c5f; }
 
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
@@ -78,7 +77,6 @@ $(document).ready(function(){
                 <nav class="tnb">
                     <a href="login.html">로그인</a>
                     <a href="join.html">회원가입</a>
-                    <a href="sitemap.html">사이트맵</a>
                 </nav>
                 <nav class="gnb">
                     <ul>
@@ -128,7 +126,7 @@ $(document).ready(function(){
         </header>
         <div class="content">
             <figure class="vs">
-                <img src="./img/bg1_visual.png" alt=""></img>
+                <img src="./img/bg4_visual.png" alt=""></img>
             </figure>
             <div class="bread">
                 <div class="bread_fr">
@@ -136,37 +134,29 @@ $(document).ready(function(){
                     <span class="sel">로그인</span>
                 </div>
             </div>
-            <section class="page">
-                <div class="page_wrap">
-                    <h2 class="page_title">로그인</h2>
-                    <div class="form_fr">
-                        <form name="frm1" action="" method="post" id="loginForm" class="frm">
-                            <table class="frm_tb">
-                                <tbody>
-                                    <tr>
-                                        <th><label for="id">아이디</label></th>
-                                        <td>
-                                            <input type="text" id="id" name="id" class="in_dt" required autofocus>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th><label for="id">비밀번호</label></th>
-                                        <td>
-                                            <input type="password" id="pw" name="pw" class="in_dt" required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <button type="submit" class="in_btn">로그인</button>
-                                            <button type="reset" class="in_btn">취소</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </form>
-                    </div>
-                </div>
-            </section>
+            <div class="login_wrap">
+                <h2 class="login_tit">로그인</h2>
+                <form action="" method="post" id="login_form">
+                    <table class="login">
+                        <tbody>
+                            <tr>
+                                <th><label for="id">아이디</label></th>
+                                <td><input type="text" name="id" required></td>
+                            </tr>
+                            <tr>
+                                <th><label for="pw">비밀번호</label></th>
+                                <td><input type="password" name="pw" required></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="reset" class="login_btn">취소</button>
+                                    <button type="submit" class="login_btn">로그인</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
         </div> 
         <footer class="ft">
             <div class="ft_wrap">
