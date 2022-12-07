@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>카테고리</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<!-- font -->
+<link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+<style>
+.breadcrumb {
+	border-bottom:1px solid #ddd; 
+	padding-bottom:8px; 
+	padding-left:20px;
+	min-height:48px; 
+	line-height:48px;
+}
+.container, #con {
+ 	padding-bottom:40px;
+}
+.title {
+	font-size: 25px;
+}
+.item_com {
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+	white-space: nowrap;
+	margin: 10px;
+}
+</style>
+<body>
+    <!-- Header -->
+    <div class="hero-head">
+		<style>
+		.navbar-item img {
+			max-height: none;
+		}
+		#gnb .navbar-link::after { 
+			content: ""; 
+			display: none; 
+		}
+		.navbar-dropdown.cate {
+			min-width: 1900px;
+			width: 100%;
+			position: absolute;
+			left: -150px;
+		}
+		.navbar-dropdown.cate a {
+			display: inline-block; 
+			padding: 8px;
+			margin-right: 20px;  
+			width: 200px; 
+			text-overflow: ellipsis; 
+			overflow: hidden; 
+			white-space: nowrap; 
+			font-weight: 500;
+			text-align: center;
+		}
+		.container:not(.is-max-desktop):not(.is-max-widescreen) {
+			max-width: 1900px;
+		}
+		</style>
+		<div id="nav-group">
+			<nav class="navbar" role="navigation" aria-label="main navigation">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="/pro3/">
+					<img src="https://www.ddm.go.kr/common/images/layout/logo_bi_s2022.png" width="144" height="72">
+					</a>
+			
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+				</div>
+
+				<div id="navbarBasicExample" class="navbar-menu">
+					<div class="navbar-start" id="gnb">
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a href="./GetTourCateListCtrlcateA.html" class="navbar-link is-arrowless">테마관광</a>
+							<div class="navbar-dropdown cate" id="cate1">
+								<a href="./GetTourDetailCtrlno1.html">제기동 골목이야기</a>
+								<a href="./GetTourDetailCtrlno1.html">도심 속 산책길</a>
+							</div>
+						</div>
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a href="./GetTourCateListCtrlcateB.html" class="navbar-link is-arrowless">축제와 문화</a>
+							<div class="navbar-dropdown cate" id="cate2">
+								<a href="./GetTourDetailCtrlno3.html">배봉산 해맞이 축제</a>
+								<a href="./GetTourDetailCtrlno4.html">동대문봄꽃축제</a>
+							</div>
+						</div>
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a href="./GetTourCateListCtrlcateC.html" class="navbar-link is-arrowless">문화재와 역사</a>
+							<div class="navbar-dropdown cate" id="cate3">
+								<a href="./GetTourDetailCtrlno5.html">하정 유관에 얽힌 이야기</a>
+								<a href="./GetTourDetailCtrlno6.html">안암천, 안감내 다리에 얽힌 옛날 이야기</a>
+							</div>
+						</div>
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a href="./GetTourCateListCtrlcateD.html" class="navbar-link is-arrowless">관광과 명소</a>
+							<div class="navbar-dropdown cate" id="cate4">
+								<a href="./GetTourDetailCtrlno7.html">명소</a>
+								<a href="./GetTourDetailCtrlno8.html">쇼핑</a>
+								<a href="./GetTourDetailCtrlno9.html">식도락</a>
+							</div>
+						</div>
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a href="./GetTourCateListCtrlcateE.html" class="navbar-link is-arrowless">참여마당</a>
+							<div class="navbar-dropdown cate" id="cate5">
+								<a href="./GetTourDetailCtrlno10.html">관광불편신고</a>
+								<a href="./GetTourDetailCtrlno11.html">촬영신청 안내</a>
+							</div>
+						</div>
+						<div class="navbar-item has-dropdown is-hoverable single">
+							<a href="./GetNoticeListCtrl.html" class="navbar-link">동대문소식</a>
+							<div class="navbar-dropdown single">
+								<a class="navbar-item" href="./GetNoticeListCtrl.html">공지사항</a>
+								<a class="navbar-item" href="./GetQnaListCtrl.html">QnA</a>
+								<a class="navbar-item" href="./GetReviewListCtrl.html">여행후기</a>			     
+							</div> 
+						</div>
+					</div>
+				
+					<div class="navbar-end" id="tnb">
+						<div class="navbar-item">
+							<div class="buttons">
+								<a class="button is-primary" href="./UserInfoCtrl.html"><strong>회원정보</strong></a>
+								<a class="button is-light" href="./index.html">로그아웃</a>
+								<a class="button is-light" href="./AdminCtrl.html">관리자</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<script>
+			$(document).ready(function(){
+				$.ajax({
+					url:"/pro3/MenuCtrl.do",
+					type:"post",
+					entype:"UTF-8",
+					datatype:"json",
+					processData:false,
+					contentType:false,
+					cache:false,
+					success:function(data){
+						$(".navbar-dropdown.cate").empty();
+						var trans = $.parseJSON(data);
+						console.log(trans);
+						$.each(trans, function(key, value){
+							if(key=="data"){
+								for(var i=0;i<value.length;i++){
+									if(value[i].cate=="A"){
+										$("#cate1").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+									} else if(value[i].cate=="B"){
+										$("#cate2").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+									} else if(value[i].cate=="C"){
+										$("#cate3").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+									} else if(value[i].cate=="D"){
+										$("#cate4").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+									} else if(value[i].cate=="E"){
+										$("#cate5").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+									}
+								}
+							}
+						});
+					}
+				});
+			});
+			</script>
+		</div>
+	</div>
+    <!-- Breadcrumb -->
+ 	<nav class="breadcrumb" aria-label="breadcrumbs">
+	  <ul>
+	    <li><a href="./index.html">홈</a></li>
+	    <li><a href="./GetTourCateListCtrlcateC.html">카테고리</a></li>
+	  </ul>
+	</nav>
+    <!-- Tile -->
+	<section class="section">
+		<div class="container">
+			<h1 class="title">투어</h1>
+		</div>
+		<div id="con">
+			<div class="tile is-ancestor columns">
+                <!-- Sub1 -->
+                <div class="tile is-3 is-vertical" style="box-sizing:border-box;">
+					<article class="tile is-child notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+						<p class="title">하정 유관에 얽힌 이야기</p>
+						<p class="subtitle">
+
+						</p>
+						<figure class="image is-4by3">
+						<img src="./data/img/sub3/img1-1.jpg" alt="하정 유관에 얽힌 이야기">
+						</figure>
+						<div class="content">
+						<p class="item_com">선왕조 때 대표적인 청백리로 그 이름이 널리 알려진 하정 유관선생 댁이 현재 신설동 근처에 있었다.
+						'청백리'라는 말은 한마디로 '깨끗한 관리', 요즈음 말로 바꾸면 부정부패와는 거리가 먼 정직한 성품의 모범공무원을 가리키는 말이다.</p>
+						</div>
+						<a href="./GetTourDetailCtrlno5.html" class="button is-primary">자세히 보기</a>
+					</article>
+                </div>
+                <!-- Sub2 -->
+                <div class="tile is-3 is-vertical" style="box-sizing:border-box;">
+                    <article class="tile is-child notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
+                        <p class="title">안감천, 안감내 다리에 얽힌 옛날 이야기</p>
+                        <p class="subtitle">
+    
+                        </p>
+                        <figure class="image is-4by3">
+                        <img src="./data/img/sub3/img2-1.jpg" alt="안감천, 안감내 다리에 얽힌 옛날 이야기">
+                        </figure>
+                        <div class="content">
+                        <p class="item_com">지금은 서울 한가운데로 한강이 흐르고 있지만 예전 조선시대의 한양인 그 당시 서울 한가운데는 청계천이 흐르고 있었다.
+						청계천에는 그 당시만 해도 물이 맑아서 붕어나 피라미 등 물고기들이 떼를 지어 노닐었고 청계천 뚝방에는 실버들이 늘어져 한양의 수려한 산세와 어울려져 좋은 경치를 이루었다.
+						청계천으로 들어가는 작은 시냇물이 허다한데 그 중 하나가 북한산 줄기인 정릉에서 시작하여 지금의 성북동을 거쳐 안암동 용두동으로 내려오는 안암천(安岩川)이다.</p>
+                        </div>
+                        <a href="./GetTourDetailCtrlno6.html" class="button is-primary">자세히 보기</a>
+                    </article>
+                </div>
+			</div>
+		</div>  
+        <!-- Link -->
+		<div class="buttons">
+		  <a href="./GetTourListCtrl.html" class="button is-primary">장소 목록</a>
+		</div>
+	</section>
+    <!-- Footer -->
+	<div class="hero-foot">
+		<footer class="footer">
+		<div class="content has-text-left">
+			<div class="footer_content">
+				<a href="" class="link_anchor">개인정보처리지침</a>·
+				<a href="" class="link_anchor">누리집오류신고</a>
+				<div class="footer_info">
+					<span class="address">[02565]서울시 동대문구 천호대로 145(용두동)</span>&nbsp;|&nbsp;
+					<span>전화 : 02-2127-5000  근무시간 09 : 00 ~ 18 : 00(평일) 휴무(토,일요일)</span>&nbsp;|&nbsp;
+					<span>FAX : 02.2127.5096</span>
+					<p class="copyright">Copyright＠ 2021 DONGDAEMUN-GU all rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>묻고 답하기</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<style>
+abbr {
+	text-decoration: none;
+	padding-right: 100px;
+}
+.breadcrumb {
+	border-bottom:1px solid #ddd; 
+	padding-bottom:8px; 
+	padding-left:20px;
+	min-height:48px; 
+	line-height:48px;
+}
+</style>
+<body>
+    <!-- Header -->
+    <div class="hero-head">
+        <style>
+        .navbar-item img {
+            max-height: none;
+        }
+        #gnb .navbar-link::after { 
+            content: ""; 
+            display: none; 
+        }
+        .navbar-dropdown.cate {
+            min-width: 1900px;
+            width: 100%;
+            position: absolute;
+            left: -150px;
+        }
+        .navbar-dropdown.cate a {
+            display: inline-block; 
+            padding: 8px;
+            margin-right: 20px;  
+            width: 200px; 
+            text-overflow: ellipsis; 
+            overflow: hidden; 
+            white-space: nowrap; 
+            font-weight: 500;
+            text-align: center;
+        }
+        .container:not(.is-max-desktop):not(.is-max-widescreen) {
+            max-width: 1900px;
+        }
+        </style>
+        <div id="nav-group">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/pro3/">
+                    <img src="https://www.ddm.go.kr/common/images/layout/logo_bi_s2022.png" width="144" height="72">
+                    </a>
+            
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start" id="gnb">
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="./GetTourCateListCtrlcateA.html" class="navbar-link is-arrowless">테마관광</a>
+                            <div class="navbar-dropdown cate" id="cate1">
+                                <a href="./GetTourDetailCtrlno1.html">제기동 골목이야기</a>
+                                <a href="./GetTourDetailCtrlno1.html">도심 속 산책길</a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="./GetTourCateListCtrlcateB.html" class="navbar-link is-arrowless">축제와 문화</a>
+                            <div class="navbar-dropdown cate" id="cate2">
+                                <a href="./GetTourDetailCtrlno3.html">배봉산 해맞이 축제</a>
+                                <a href="./GetTourDetailCtrlno4.html">동대문봄꽃축제</a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="./GetTourCateListCtrlcateC.html" class="navbar-link is-arrowless">문화재와 역사</a>
+                            <div class="navbar-dropdown cate" id="cate3">
+                                <a href="./GetTourDetailCtrlno5.html">하정 유관에 얽힌 이야기</a>
+                                <a href="./GetTourDetailCtrlno6.html">안암천, 안감내 다리에 얽힌 옛날 이야기</a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="./GetTourCateListCtrlcateD.html" class="navbar-link is-arrowless">관광과 명소</a>
+                            <div class="navbar-dropdown cate" id="cate4">
+                                <a href="./GetTourDetailCtrlno7.html">명소</a>
+                                <a href="./GetTourDetailCtrlno8.html">쇼핑</a>
+                                <a href="./GetTourDetailCtrlno9.html">식도락</a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a href="./GetTourCateListCtrlcateE.html" class="navbar-link is-arrowless">참여마당</a>
+                            <div class="navbar-dropdown cate" id="cate5">
+                                <a href="./GetTourDetailCtrlno10.html">관광불편신고</a>
+                                <a href="./GetTourDetailCtrlno11.html">촬영신청 안내</a>
+                            </div>
+                        </div>
+                        <div class="navbar-item has-dropdown is-hoverable single">
+                            <a href="./GetNoticeListCtrl.html" class="navbar-link">동대문소식</a>
+                            <div class="navbar-dropdown single">
+                                <a class="navbar-item" href="./GetNoticeListCtrl.html">공지사항</a>
+                                <a class="navbar-item" href="./GetQnaListCtrl.html">QnA</a>
+                                <a class="navbar-item" href="./GetReviewListCtrl.html">여행후기</a>			     
+                            </div> 
+                        </div>
+                    </div>
+                
+                    <div class="navbar-end" id="tnb">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-primary" href="./UserInfoCtrl.html"><strong>회원정보</strong></a>
+                                <a class="button is-light" href="./index.html">로그아웃</a>
+                                <a class="button is-light" href="./AdminCtrl.html">관리자</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <script>
+            $(document).ready(function(){
+                $.ajax({
+                    url:"/pro3/MenuCtrl.do",
+                    type:"post",
+                    entype:"UTF-8",
+                    datatype:"json",
+                    processData:false,
+                    contentType:false,
+                    cache:false,
+                    success:function(data){
+                        $(".navbar-dropdown.cate").empty();
+                        var trans = $.parseJSON(data);
+                        console.log(trans);
+                        $.each(trans, function(key, value){
+                            if(key=="data"){
+                                for(var i=0;i<value.length;i++){
+                                    if(value[i].cate=="A"){
+                                        $("#cate1").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="B"){
+                                        $("#cate2").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="C"){
+                                        $("#cate3").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="D"){
+                                        $("#cate4").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    } else if(value[i].cate=="E"){
+                                        $("#cate5").append("<a href='/pro3/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a>");
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+            </script>
+        </div>
+    </div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/pro3/">홈</a></li>
+            <li><a href="./GetQnaListCtrl.html">묻고 답하기</a></li>
+        </ul>
+    </nav>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">QnA 목록</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th><abbr title="No">No</abbr></th>
+						<th><abbr title="Title">Title</abbr></th>
+						<th><abbr title="Author">Id</abbr></th>						
+						<th><abbr title="RegDate">RegDate</abbr></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span>1</span></td>
+                        <td>
+                            <a href="./GetQnaDetailCtrlno1.html">질문1</a>
+                        </td>
+                        <td>admin</td>
+						<td>	
+							2022-11-27
+						</td>
+					</tr>
+                    <tr>
+						<td><span>2</span></td>
+						<td>
+							<a href="./GetQnaDetailCtrlno2.html" style="padding-left:30px;">답변1</a>
+						</td>
+						<td>admin</td>
+						<td>
+							2022-11-27
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="buttons">
+				<a href="./addQna.html" class="button is-primary">작성</a>
+			</div>
+		</div>
+	</section>
+    <!-- Footer -->
+	<div class="hero-foot">
+		<footer class="footer">
+		<div class="content has-text-left">
+			<div class="footer_content">
+				<a href="" class="link_anchor">개인정보처리지침</a>·
+				<a href="" class="link_anchor">누리집오류신고</a>
+				<div class="footer_info">
+					<span class="address">[02565]서울시 동대문구 천호대로 145(용두동)</span>&nbsp;|&nbsp;
+					<span>전화 : 02-2127-5000  근무시간 09 : 00 ~ 18 : 00(평일) 휴무(토,일요일)</span>&nbsp;|&nbsp;
+					<span>FAX : 02.2127.5096</span>
+					<p class="copyright">Copyright＠ 2021 DONGDAEMUN-GU all rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		</footer>
+	</div>
+</body>
+</html>
