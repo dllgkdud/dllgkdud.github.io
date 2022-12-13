@@ -124,9 +124,9 @@
                 <li class="has-submenu">
                     <a href="#">네이버</a>
                     <ul class="submenu menu vertical" data-submenu>
-                        <li><a href="./profile.html">네이버 소개</a></li>
-                        <li><a href="./history1.html">주요 연혁</a></li>
-                        <li><a href="./contact.html">CONTACT</a></li>
+                        <li><a href="../naver/profile.html">네이버 소개</a></li>
+                        <li><a href="../naver/history1.html">주요 연혁</a></li>
+                        <li><a href="../naver/contact.html">CONTACT</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
@@ -157,9 +157,8 @@
 	<nav aria-label="You are here:" role="navigation">
 		<ul class="breadcrumbs">
 			<li><a href="#">홈</a></li>
-			<li><a href="#">네이버</a></li>
 			<li>
-				<span class="show-for-sr">Current: </span> 네이버 소개
+				<span class="show-for-sr">Current: </span> 회원가입
 			</li>
 		</ul>
 	</nav>
@@ -167,60 +166,138 @@
 
 <!-- content -->
 <div class="row column text-center">
-	<div class="info">
-		<h2><strong>네이버 소개</strong></h2><br>
-		<h5>네이버는 수많은 SME와 창작자, 파트너들이 미래 기술을 활용해<br>글로벌 시장에서 더 큰 성장을 이룰 수 있도록 지원하는 글로벌 테크 플랫폼입니다.</h5>
-	</div>
-</div>
-<div class="grid-container full">
-	<img src="../resources/upload/images/img_spot_summary_v2.jpg" style="width: 100vw;">
-</div>
-<div class="grid-x align-center info">
-	<dl class="cell medium-8">
-		<h4 class="large-3 columns">NAVER</h4>
-		<dd class="large-9 columns">
-			<p class="content-text">
-			네이버(주)는 글로벌 ICT 기업으로서 한국 최대 검색포털 네이버를 서비스하고 있고, 그 계열사에서 모바일 메신저 라인, 동영상 카메라 스노우, 디지털 만화 서비스 네이버웹툰, 메타버스 서비스 제페토 등을 서비스하고 있습니다. 또한, 네이버(주)는 인공지능, 로보틱스, 모빌리티 등 미래 기술에 대한 지속적인 연구개발을 통해 기술 플랫폼의 변화와 혁신을 추구하며 세계 각국의 수많은 이용자와 다양한 파트너들이 함께 성장할 수 있도록 노력하고 있습니다.
-			</p>
-		</dd>
-	</dl>
-	<dl class="cell medium-8">
-		<h4 class="large-3 columns">COMPANY<br>PROFILE</h4>
-		<dd class="large-9 columns">
-			<table>
-				<tbody>
-					<tr>
-						<th>설립연도</th>
-						<td>1999년 6월</td>
-					</tr>
-					<tr>
-						<th>본사 위치</th>
-						<td>경기도 성남시 분당구</td>
-					</tr>
-					<tr>
-						<th>주요서비스</th>
-						<td>온라인 검색포털, 모바일 메신저 플랫폼</td>
-					</tr>
-					<tr>
-						<th>주요사업</th>
-						<td>온라인 광고 및 콘텐츠 사업</td>
-					</tr>
-					<tr>
-						<th>해외 계열 법인</th>
-						<td>일본, 미국, 프랑스, 중국, 베트남, 대만, 태국, 인도네시아 외</td>
-					</tr>
-					<tr>
-						<th>매출액</th>
-						<td>6조 818억 원 (2021년)</td>
-					</tr>
-					<tr>
-						<th>전체인력</th>
-						<td>4,595명 (본사 기준, 2021년 기준)</td>
-					</tr>
-				</tbody>
-			</table>
-		</dd>
-	</dl>
+	<h2>회원가입양식</h2>
+	<form action="/member/insert.do" method="post" onsubmit="return joinCheck(this)">
+		<table>
+			<tbody>
+				<tr>
+					<th>아이디</th>
+					<td>
+						<div class="form-row">
+							<input type="text" name="userid" id="userid" style="width:200px;float:left;" placeholder="아이디" maxlength="50" required />
+							<input type="button" id="idCkBtn" onclick="idCheck()" class="button" value="아이디 중복 체크">
+							<input type="hidden" name="idck" id="idck" value="no">
+						</div>
+						<div class="form-idCk">							
+							<p id="msg">아이디 중복 체크를 진행하십시오.</p>	
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="userpw" id="userpw" placeholder="비밀번호" required /></td>
+				</tr>
+ 				<tr>
+					<th>비밀번호 확인</th>
+					<td><input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인" required /></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input type="text" name="username" id="username" placeholder="이름" maxlength="50" required /></td>
+				</tr>
+				<tr>
+					<th>생년월일</th>
+					<td><input type="text" name="birth" id="birth" placeholder="19000124" maxlength="8" required /></td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td><input type="text" name="email" id="email" placeholder="email@naver.com" required /></td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+					<td><input type="text" name="tel" id="tel" placeholder="010-XXXX-XXXX" maxlength="13" required /></td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td>
+						<input type="text" name="addr1" id="addr1" placeholder="경기도 성남시 분당구 정자일로 95" required />
+						<input type="text" name="addr2" id="addr2" placeholder="네이버 1784" required />
+						<input type="text" name="postcode" id="postcode" style="width:200px;float:left;" placeholder="13561" required />
+						<button id="button" onclick="findAddr()" class="button">우편번호 검색</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="button-group">
+			<a href="../index.html" class="button">취소</a>
+			<!--<input type="submit" class="submit button" value="등록" />-->
+            <a href="../index.html" class="submit button">등록</a>
+		</button>
+	</form>
+	<script>
+		$(document).ready(function(){
+			$("#userid").keyup(function(){
+				$("#idck").val("no");
+				if($(this).val()!=""){
+					$("#msg").html("아이디 입력중입니다...");
+				} else {
+					$("#msg").html("아이디 중복 체크를 진행하십시오.");
+				}
+			});
+		});
+	</script>
+	<script>
+		function idCheck(){
+			if($("#userid").val()==""){
+				alert("아이디를 입력해 주십시오.");
+				$("#userid").focus();
+				return;
+			}
+            /* 
+			var params = {	userid : $("#userid").val()	}	//전송되어질 데이터를 객체로 묶음
+			$.ajax({
+				url:"/member/check.do",	//아이디가 전송되어질 곳
+				type:"post",						//전송방식
+				dataType:"json",					//데이터 반환 방식
+				data:params,						//전송방식이 post인 경우 객체로 묶어서 전송
+				success:function(result){
+					console.log(result.result);
+					var idChk = result.result;		//boolean을 적용해 true/false를 받음
+					if(idChk==false){				//사용할 수 없는 아이디
+						$("#idck").val("no");
+						$("#msg").html("<strong style='color:red'>이미 사용 중인 아이디 입니다.</strong>");
+						$("#userid").focus();
+					} else if(idChk==true){			//사용 가능한 아이디
+						$("#idck").val("yes");
+						$("#msg").html("<strong style='color:blue'>사용 가능한 아이디 입니다.</strong>");
+					} else if(idck==""){
+						$("#msg").html("<strong>아이디가 확인되지 않았습니다.</strong>");
+					}
+				}
+			});
+            */
+		}
+		function joinCheck(f){
+			if(f.userpw.value!=f.pw2.value){
+				alert("비밀번호가 일치하지 않습니다.");
+				f.userpw.focus();
+				return false;
+			}
+			if(f.idck.value!="yes"){
+				alert("아이디 중복 체크를 진행하십시오.");
+				return false;
+			}
+		}
+	</script>
+	<script>
+		function findAddr() {
+			new daum.Postcode({
+				oncomplete: function(data) {
+					console.log(data);
+					var roadAddr = data.roadAddress;
+					var jibunAddr = data.jibunAddress;
+					document.getElementById("postcode").value = data.zonecode;
+					if(roadAddr !== '') {
+						document.getElementById("addr1").value = roadAddr;				
+					} else if(jibunAddr !== ''){
+						document.getElementById("addr1").value = jibunAddr;
+					}
+					document.getElementById("addr2").focus();
+				}
+			}).open();
+		}
+	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </div>
 
 <!-- footer -->
