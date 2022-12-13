@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER Corporation</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.navercorp.com/img/ko/favicon.ico">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>	
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(document).foundation();
+    });
+    </script>
+
+    <style>
+    /* initial */
+    ul { list-style:none; }
+    div.row h2 { padding-top: 20px; }
+
+    /* header */
+    .menu>li>a { display: block; line-height: 20px; }
+    .menu-text .logo { font-size: 26px; font-weight: 800; color: #4bd16a; }
+    .top-bar, .top-bar ul { background-color: #fff; }
+    .has-submenu { padding-top: 10px; padding-left: 50px; }
+    .has-submenu a { color: #222; font-weight: 600; }
+    .is-submenu-item { clear: both; background-color: #4bd16a; }
+    .is-submenu-item:hover { background-color: #1ec545; text-decoration: underline; }
+    .is-submenu-item a { color: #fff; font-size: 14px; }
+    .dropdown { width:100%; }
+    .dropdown.menu>li.is-dropdown-submenu-parent>a::after { border-color: #1ec545 transparent transparent; }
+    .large-7.columns a { color: #878890; }
+
+    /* breadcrumb */
+    .breadcrumbs { margin-left: 40px; }
+    .breadcrumbs li { font-size: 14px; font-weight: 600; letter-spacing: -1px; }
+    .breadcrumbs li a { color: #878890; }
+    .breadcrumbs li:not(:last-child)::after { position: relative; margin: 0 0.75rem; opacity: 1; 
+    content: ">"; color: #aaa; }
+
+    /* slide */
+    .orbit { display: block; box-sizing: inherit; }
+    .orbit-container { height: 100%; }
+    .orbit-slide { box-sizing: inherit; position: relative; }
+    .orbit-slide img { width: 100vw; }
+    .slide_text_box { display: block; width: 100%; }
+    .slide_title { position: absolute; top: 50%; left: 10%; font-size: 40px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_title:after { content: ""; clear: both; display: block; }
+    .slide_text { position: absolute; top: 75%; left: 10%; font-size: 16px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_text:after { content: ""; clear: both; display: block; }
+
+    /* index */
+    .callout.secondary { border: none; background-color: #f8f9fa; color: #878890; }
+    .callout { margin-top: 50px; border: none; border-right: 1px solid #eee; }
+    .callout:first-child { font-size: 14px; font-weight: 600; }
+    .large-7 .logo { padding-bottom: 7px; padding-right: 10px; }
+    .lead { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .subheader { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .cell-id { font-size: 20px; }
+
+    /* agree */
+    .agree { width: 1000px; white-space:pre-wrap; margin: 10px auto; padding: 24px; border:1px solid #eee; 
+    height:600px; overflow-y:auto; }
+    .form-check { text-align: left; padding-left: 100px; }
+    .form-idCk p { text-align: left; margin-bottom: 0; font-size: 14px; }
+    .container form p { text-align: left; font-size: 12px; }
+
+    /* naver */
+    .info { margin: 70px auto; }
+    .info h2, .info h5 { letter-spacing: -1px; }
+    .info a { width: 50%; }
+    .info dl h4 { font-weight: 600; }
+    .info .medium-8 { padding-bottom: 3rem; }
+    .large-9 table { border: none; border-top: 2px solid #222; }
+    .large-9 th{ text-align: left; }
+    #his-sub-checked strong { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    .info .his-sub-title { color: #bac2cd; cursor: pointer; }
+    .info .his-sub-title strong:hover { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    #his-table table { border-top: none; }
+    #his-table th, #his-table td { background-color: #fff; }
+    #his-year { font-size: 22px; }
+    #his-month { width: 100px; text-align: right; }
+
+    /* service */
+    #val-content { margin: 60px 0; padding-right: 40px; color: #606167; font-size: 16px; line-height: 1.8; letter-spacing: -1px; }
+    .val-image { position: relative; width: 100%; }
+    .gif { position: absolute; top: 450px; left:0; }
+    .large-9 th { width: 100px; }
+    .content_box_button { border-bottom: 1px solid #222; }
+    .btn_text { padding: 1.5rem; text-align: right; font-size: 14px; }
+    .btn_text span { font-weight: 600; letter-spacing: -1px; }
+    .btn_text a { margin-right: 20px; }
+    .circle { display: inline-block; width: 40px; height: 40px; background-color: #ddd; border-radius: 50%; padding-top: 6px; padding-right: 10px; text-align: right; }
+    .circle:after { content: ""; clear: both; white-space: nowrap; }
+    .circle:hover { background-color: #00c73c; }
+
+    /* news */
+
+    /* board */
+
+    </style>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+    <nav class="top-bar">
+        <div class="top-bar-left" id="gnb">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><a href="/" class="logo">NAVER</a></li>
+                <li class="has-submenu">
+                    <a href="#">네이버</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/naver/profile.html">네이버 소개</a></li>
+                        <li><a href="/naver/history1.html">주요 연혁</a></li>
+                        <li><a href="/naver/contact.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">가치실현</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/service/value.html">원칙</a></li>
+                        <li><a href="/service/business.html">정책</a></li>
+                        <li><a href="/service/impact.html">임팩트</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="/news/list.html">홍보</a></li>
+                <li class="has-submenu">
+                    <a href="#">서비스</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/board/list.html">공지사항</a></li>
+                        <li><a href="/data/list.html">자료실</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="https://recruit.navercorp.com/">채용</a></li>
+            </ul>
+        </div>   
+    </nav>
+</header>
+
+<!-- breadcrumb -->
+<div class="grid-x cell">
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">홈</a></li>
+			<li><a href="#">네이버</a></li>
+			<li>
+				<span class="show-for-sr">Current: </span> CONTACT
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- content -->
+<div class="row column text-center">
+	<div class="info">
+		<h2><strong>CONTACT</strong></h2><br>
+	</div>
+</div>
+<div class="grid-container full">
+	<img src="/resources/upload/images/img_spot_history.jpg" style="width: 100vw;" alt="연혁 소개 이미지">
+</div>
+<div class="grid-x align-center info">
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">네이버 본사</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			ADDRESS<br>경기도 성남시 분당구 정자일로 95 네이버 1784 우)13561<br>
+			NAVER 1784, 95 Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea<br><br>TEL 1588-3830</p>
+		</dd>
+	</dl>
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">글로벌 계열사</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			NAVER BAND Inc.<br>5750 Wilshire Blvd. Ste 640, Los Angeles, CA 90036, USA<br><br>
+			NAVER FRANCE<br>2ème étage, 89 Rue Réaumur 75002 Paris, France<br><br>
+			NAVER J.Hub Corporation<br>BASECAMP TOKYO, 2-10-44, Kamiosaki, Shinagawa Ku, Tokyo, Japan<br><br>
+			NAVER LABS EUROPE<br>6-8 chemin de Maupertuis 38240 Meylan, France<br><br>
+			NAVER VIETNAM<br>4th Floor, Tower B, Viettel Building, 285 Cach Mang Thang Tam, Dist 10, HCMC, Vietnam</p>
+		</dd>
+	</dl>
+</div>
+<div class="grid-container full">
+	<!-- <img src="https://www.navercorp.com/img/ko/naver/img_map.png" style="width: 100vw;" alt="지도 이미지"> -->
+	<div style="clear:both; margin-bottom:20px; padding-bottom:20px; ">
+		<div id="map" style="margin-top:50px; height:600px; background:white; "></div>
+		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<!-- https://developers.kakao.com/ 회원가입 후 -> 내 애플리케이션 -> 애플리케이션 추가 -> 추가된 해당 앱을 클릭하면 발급받은  API키를 확인할 수 있음  -->
+		<!-- * 카카오맵 - 지도퍼가기 -->		
+		<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은API키&​libraries=services"></script>
+		<script>
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		    mapOption = { //128.433182, 34.8544227
+		        center: new kakao.maps.LatLng(37.3588754, 127.1052332), // 지도의 중심좌표
+		        level: 5 // 지도의 확대 레벨
+		    };  
+		
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+		
+		// 주소-좌표 변환 객체를 생성합니다
+		var geocoder = new kakao.maps.services.Geocoder();
+		
+		// 주소로 좌표를 검색합니다
+		geocoder.addressSearch($("#addr").val(), function(result, status) {
+		
+		    // 정상적으로 검색이 완료됐으면 
+		     if (status === kakao.maps.services.Status.OK) {
+		
+		        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+		        // 결과값으로 받은 위치를 마커로 표시합니다
+		        var marker = new kakao.maps.Marker({
+		            map: map,
+		            position: coords
+		        });
+				
+		        // 인포윈도우로 장소에 대한 설명을 표시합니다
+		        var infowindow = new kakao.maps.InfoWindow({
+		            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#place').val()+'</div>'
+		        });
+		        infowindow.open(map, marker);
+		
+		        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+		        map.setCenter(coords);
+		    } 
+		});    
+		</script>
+	</div>
+	<div title="" style="position: absolute; overflow: hidden; box-sizing: content-box !important; cursor: inherit; 
+	left: 940px; top: 1850px; width: 22px; height: 33px; z-index: 50">
+		<img draggable="false" src="/resources/upload/images/marker-default.png" alt="">
+	</div>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="callout large secondary">
+        <div class="row">
+            <div class="large-7 columns">
+            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
+            <span><a href="#">제휴제안</a></span>&nbsp;
+            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
+            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
+        </div>
+        <div class="large-5 columns">
+        <ul class="menu vertical">
+            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

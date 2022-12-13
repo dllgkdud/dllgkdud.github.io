@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER Corporation</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.navercorp.com/img/ko/favicon.ico">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(document).foundation();
+    });
+    </script>
+
+    <style>
+    /* initial */
+    ul { list-style:none; }
+    div.row h2 { padding-top: 20px; }
+
+    /* header */
+    .menu>li>a { display: block; line-height: 20px; }
+    .menu-text .logo { font-size: 26px; font-weight: 800; color: #4bd16a; }
+    .top-bar, .top-bar ul { background-color: #fff; }
+    .has-submenu { padding-top: 10px; padding-left: 50px; }
+    .has-submenu a { color: #222; font-weight: 600; }
+    .is-submenu-item { clear: both; background-color: #4bd16a; }
+    .is-submenu-item:hover { background-color: #1ec545; text-decoration: underline; }
+    .is-submenu-item a { color: #fff; font-size: 14px; }
+    .dropdown { width:100%; }
+    .dropdown.menu>li.is-dropdown-submenu-parent>a::after { border-color: #1ec545 transparent transparent; }
+    .large-7.columns a { color: #878890; }
+
+    /* breadcrumb */
+    .breadcrumbs { margin-left: 40px; }
+    .breadcrumbs li { font-size: 14px; font-weight: 600; letter-spacing: -1px; }
+    .breadcrumbs li a { color: #878890; }
+    .breadcrumbs li:not(:last-child)::after { position: relative; margin: 0 0.75rem; opacity: 1; 
+    content: ">"; color: #aaa; }
+
+    /* slide */
+    .orbit { display: block; box-sizing: inherit; }
+    .orbit-container { height: 100%; }
+    .orbit-slide { box-sizing: inherit; position: relative; }
+    .orbit-slide img { width: 100vw; }
+    .slide_text_box { display: block; width: 100%; }
+    .slide_title { position: absolute; top: 50%; left: 10%; font-size: 40px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_title:after { content: ""; clear: both; display: block; }
+    .slide_text { position: absolute; top: 75%; left: 10%; font-size: 16px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_text:after { content: ""; clear: both; display: block; }
+
+    /* index */
+    .callout.secondary { border: none; background-color: #f8f9fa; color: #878890; }
+    .callout { margin-top: 50px; border: none; border-right: 1px solid #eee; }
+    .callout:first-child { font-size: 14px; font-weight: 600; }
+    .large-7 .logo { padding-bottom: 7px; padding-right: 10px; }
+    .lead { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .subheader { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .cell-id { font-size: 20px; }
+
+    /* agree */
+    .agree { width: 1000px; white-space:pre-wrap; margin: 10px auto; padding: 24px; border:1px solid #eee; 
+    height:600px; overflow-y:auto; }
+    .form-check { text-align: left; padding-left: 100px; }
+    .form-idCk p { text-align: left; margin-bottom: 0; font-size: 14px; }
+    .container form p { text-align: left; font-size: 12px; }
+
+    /* naver */
+    .info { margin: 70px auto; }
+    .info h2, .info h5 { letter-spacing: -1px; }
+    .info a { width: 50%; }
+    .info dl h4 { font-weight: 600; }
+    .info .medium-8 { padding-bottom: 3rem; }
+    .large-9 table { border: none; border-top: 2px solid #222; }
+    .large-9 th{ text-align: left; }
+    #his-sub-checked strong { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    .info .his-sub-title { color: #bac2cd; cursor: pointer; }
+    .info .his-sub-title strong:hover { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    #his-table table { border-top: none; }
+    #his-table th, #his-table td { background-color: #fff; }
+    #his-year { font-size: 22px; }
+    #his-month { width: 100px; text-align: right; }
+
+    /* service */
+    #val-content { margin: 60px 0; padding-right: 40px; color: #606167; font-size: 16px; line-height: 1.8; letter-spacing: -1px; }
+    .val-image { position: relative; width: 100%; }
+    .gif { position: absolute; top: 450px; left:0; }
+    .large-9 th { width: 100px; }
+    .content_box_button { border-bottom: 1px solid #222; }
+    .btn_text { padding: 1.5rem; text-align: right; font-size: 14px; }
+    .btn_text span { font-weight: 600; letter-spacing: -1px; }
+    .btn_text a { margin-right: 20px; }
+    .circle { display: inline-block; width: 40px; height: 40px; background-color: #ddd; border-radius: 50%; padding-top: 6px; padding-right: 10px; text-align: right; }
+    .circle:after { content: ""; clear: both; white-space: nowrap; }
+    .circle:hover { background-color: #00c73c; }
+    .content_box_link { padding: 1.5rem; text-align: right; font-size: 14px; }
+    .content_box_link span { color: #606167; font-weight: 600; letter-spacing: -1px; }
+    .content_box_link span:hover { text-decoration: underline; }
+
+    /* news */
+
+    /* board */
+
+    </style>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+    <nav class="top-bar">
+        <div class="top-bar-left" id="gnb">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><a href="/" class="logo">NAVER</a></li>
+                <li class="has-submenu">
+                    <a href="#">네이버</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/naver/profile.html">네이버 소개</a></li>
+                        <li><a href="/naver/history1.html">주요 연혁</a></li>
+                        <li><a href="/naver/contact.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">가치실현</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/service/value.html">원칙</a></li>
+                        <li><a href="/service/business.html">정책</a></li>
+                        <li><a href="/service/impact.html">임팩트</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="/news/list.html">홍보</a></li>
+                <li class="has-submenu">
+                    <a href="#">서비스</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/board/list.html">공지사항</a></li>
+                        <li><a href="/data/list.html">자료실</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="https://recruit.navercorp.com/">채용</a></li>
+            </ul>
+        </div>   
+    </nav>
+</header>
+
+<!-- breadcrumb -->
+<div class="grid-x cell">
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">홈</a></li>
+			<li><a href="#">가치실현</a></li>
+			<li><a href="#">임팩트</a></li>
+			<li>
+				<span class="show-for-sr">Current: </span> 동반성장
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- content -->
+<div class="row column text-center">
+	<div class="info">
+		<h2><strong>동반성장</strong></h2><br>
+		<h5>네이버는 다양한 파트너들과 협력하며<br>건강한 인터넷 생태계를 구축하기 위해 노력하고 있습니다.</h5>
+	</div>
+</div>
+<div class="grid-container full">
+	<img src="/resources/upload/images/img_value_spot6.jpg" style="width: 100vw;" alt="동반성장 이미지">
+</div>
+<div class="grid-x align-center info">
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">공정한 거래를 위한<br>시스템 구축</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			네이버는 파트너를 경영활동의 동반자로서 존중하고, 상호협력을 통해 동반성장을 추구할 것을 약속하는 '윤리실천 협약'을 2015년 부터 시행해오고 있으며, 
+			동반성장 4대 실천사항을 준수하고, 기업윤리 및 정보보호를 위한 제도를 운영하고 있습니다. 또한 전자구매시스템을 통해 투명성 및 공정성 확보를 위한 지침을 준수하고 있습니다.
+			</p>
+		</dd>
+	</dl>
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">파트너를 위한 맞춤형<br>프로그램 지원</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			네이버는 주요 파트너를 대상으로 금융, 경영, 교육, 판로확대 등 다양한 분야의 지원 프로그램을 운영, 파트너의 경영활동에 필요한 제반 사항을 지원하고 있습니다.
+			</p>
+		</dd>
+	</dl>
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">파트너 커뮤니케이션<br>채널 운영</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			네이버는 동반성장 전담조직을 운영하고 파트너들이 직접 제안 및 문의를 할 수 있는 소통창구인 파트너스라인을 운영하고 있습니다. 
+			또한 네이버의 동반성장 비전을 공유하는 자리인 파트너스데이를 정기적으로 개최하는 등 파트너들과의 원활한 소통을 위한 노력을 지속하고 있습니다.
+			</p>
+		</dd>
+	</dl>
+	<dl class="cell medium-8">
+		<dd class="large-9 columns">
+            <div class="content_box_link">
+                <a href="https://winwin.naver.com/partnersLine/ptnLine" class="btn_link page" target="_blank">
+                <span class="btn_text">파트너스라인 바로가기</span>
+                </a>
+                <a href="https://winwin.naver.com/" class="btn_link page" target="_blank">
+                <span class="btn_text">동반성장 프로그램 바로가기</span>
+                </a>
+            </div>
+		</dd>
+	</dl>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="callout large secondary">
+        <div class="row">
+            <div class="large-7 columns">
+            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
+            <span><a href="#">제휴제안</a></span>&nbsp;
+            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
+            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
+        </div>
+        <div class="large-5 columns">
+        <ul class="menu vertical">
+            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

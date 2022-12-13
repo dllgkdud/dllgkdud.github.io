@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER Corporation</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.navercorp.com/img/ko/favicon.ico">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(document).foundation();
+    });
+    </script>
+
+    <style>
+    /* initial */
+    ul { list-style:none; }
+    div.row h2 { padding-top: 20px; }
+
+    /* header */
+    .menu>li>a { display: block; line-height: 20px; }
+    .menu-text .logo { font-size: 26px; font-weight: 800; color: #4bd16a; }
+    .top-bar, .top-bar ul { background-color: #fff; }
+    .has-submenu { padding-top: 10px; padding-left: 50px; }
+    .has-submenu a { color: #222; font-weight: 600; }
+    .is-submenu-item { clear: both; background-color: #4bd16a; }
+    .is-submenu-item:hover { background-color: #1ec545; text-decoration: underline; }
+    .is-submenu-item a { color: #fff; font-size: 14px; }
+    .dropdown { width:100%; }
+    .dropdown.menu>li.is-dropdown-submenu-parent>a::after { border-color: #1ec545 transparent transparent; }
+    .large-7.columns a { color: #878890; }
+
+    /* breadcrumb */
+    .breadcrumbs { margin-left: 40px; }
+    .breadcrumbs li { font-size: 14px; font-weight: 600; letter-spacing: -1px; }
+    .breadcrumbs li a { color: #878890; }
+    .breadcrumbs li:not(:last-child)::after { position: relative; margin: 0 0.75rem; opacity: 1; 
+    content: ">"; color: #aaa; }
+
+    /* slide */
+    .orbit { display: block; box-sizing: inherit; }
+    .orbit-container { height: 100%; }
+    .orbit-slide { box-sizing: inherit; position: relative; }
+    .orbit-slide img { width: 100vw; }
+    .slide_text_box { display: block; width: 100%; }
+    .slide_title { position: absolute; top: 50%; left: 10%; font-size: 40px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_title:after { content: ""; clear: both; display: block; }
+    .slide_text { position: absolute; top: 75%; left: 10%; font-size: 16px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_text:after { content: ""; clear: both; display: block; }
+
+    /* index */
+    .callout.secondary { border: none; background-color: #f8f9fa; color: #878890; }
+    .callout { margin-top: 50px; border: none; border-right: 1px solid #eee; }
+    .callout:first-child { font-size: 14px; font-weight: 600; }
+    .large-7 .logo { padding-bottom: 7px; padding-right: 10px; }
+    .lead { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .subheader { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .cell-id { font-size: 20px; }
+
+    /* agree */
+    .agree { width: 1000px; white-space:pre-wrap; margin: 10px auto; padding: 24px; border:1px solid #eee; 
+    height:600px; overflow-y:auto; }
+    .form-check { text-align: left; padding-left: 100px; }
+    .form-idCk p { text-align: left; margin-bottom: 0; font-size: 14px; }
+    .container form p { text-align: left; font-size: 12px; }
+
+    /* naver */
+    .info { margin: 70px auto; }
+    .info h2, .info h5 { letter-spacing: -1px; }
+    .info a { width: 50%; }
+    .info dl h4 { font-weight: 600; }
+    .info .medium-8 { padding-bottom: 3rem; }
+    .large-9 table { border: none; border-top: 2px solid #222; }
+    .large-9 th{ text-align: left; }
+    #his-sub-checked strong { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    .info .his-sub-title { color: #bac2cd; cursor: pointer; }
+    .info .his-sub-title strong:hover { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    #his-table table { border-top: none; }
+    #his-table th, #his-table td { background-color: #fff; }
+    #his-year { font-size: 22px; }
+    #his-month { width: 100px; text-align: right; }
+
+    /* service */
+    #val-content { margin: 60px 0; padding-right: 40px; color: #606167; font-size: 16px; line-height: 1.8; letter-spacing: -1px; }
+    .val-image { position: relative; width: 100%; }
+    .gif { position: absolute; top: 450px; left:0; }
+    .large-9 th { width: 100px; }
+    .content_box_button { border-bottom: 1px solid #222; }
+    .btn_text { padding: 1.5rem; text-align: right; font-size: 14px; }
+    .btn_text span { font-weight: 600; letter-spacing: -1px; }
+    .btn_text a { margin-right: 20px; }
+    .circle { display: inline-block; width: 40px; height: 40px; background-color: #ddd; border-radius: 50%; padding-top: 6px; padding-right: 10px; text-align: right; }
+    .circle:after { content: ""; clear: both; white-space: nowrap; }
+    .circle:hover { background-color: #00c73c; }
+
+    /* news */
+
+    /* board */
+
+    </style>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+    <nav class="top-bar">
+        <div class="top-bar-left" id="gnb">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><a href="/" class="logo">NAVER</a></li>
+                <li class="has-submenu">
+                    <a href="#">네이버</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/naver/profile.html">네이버 소개</a></li>
+                        <li><a href="/naver/history1.html">주요 연혁</a></li>
+                        <li><a href="/naver/contact.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">가치실현</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/service/value.html">원칙</a></li>
+                        <li><a href="/service/business.html">정책</a></li>
+                        <li><a href="/service/impact.html">임팩트</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="/news/list.html">홍보</a></li>
+                <li class="has-submenu">
+                    <a href="#">서비스</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="/board/list.html">공지사항</a></li>
+                        <li><a href="/data/list.html">자료실</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="https://recruit.navercorp.com/">채용</a></li>
+            </ul>
+        </div>   
+    </nav>
+</header>
+
+<!-- breadcrumb -->
+<div class="grid-x cell">
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">홈</a></li>
+			<li><a href="#">네이버</a></li>
+			<li>
+				<span class="show-for-sr">Current: </span> 네이버 소개
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- content -->
+<div class="row column text-center">
+	<div class="info">
+		<h2><strong>네이버 소개</strong></h2><br>
+		<h5>네이버는 수많은 SME와 창작자, 파트너들이 미래 기술을 활용해<br>글로벌 시장에서 더 큰 성장을 이룰 수 있도록 지원하는 글로벌 테크 플랫폼입니다.</h5>
+	</div>
+</div>
+<div class="grid-container full">
+	<img src="/resources/upload/images/img_spot_summary_v2.jpg" style="width: 100vw;">
+</div>
+<div class="grid-x align-center info">
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">NAVER</h4>
+		<dd class="large-9 columns">
+			<p class="content-text">
+			네이버(주)는 글로벌 ICT 기업으로서 한국 최대 검색포털 네이버를 서비스하고 있고, 그 계열사에서 모바일 메신저 라인, 동영상 카메라 스노우, 디지털 만화 서비스 네이버웹툰, 메타버스 서비스 제페토 등을 서비스하고 있습니다. 또한, 네이버(주)는 인공지능, 로보틱스, 모빌리티 등 미래 기술에 대한 지속적인 연구개발을 통해 기술 플랫폼의 변화와 혁신을 추구하며 세계 각국의 수많은 이용자와 다양한 파트너들이 함께 성장할 수 있도록 노력하고 있습니다.
+			</p>
+		</dd>
+	</dl>
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">COMPANY<br>PROFILE</h4>
+		<dd class="large-9 columns">
+			<table>
+				<tbody>
+					<tr>
+						<th>설립연도</th>
+						<td>1999년 6월</td>
+					</tr>
+					<tr>
+						<th>본사 위치</th>
+						<td>경기도 성남시 분당구</td>
+					</tr>
+					<tr>
+						<th>주요서비스</th>
+						<td>온라인 검색포털, 모바일 메신저 플랫폼</td>
+					</tr>
+					<tr>
+						<th>주요사업</th>
+						<td>온라인 광고 및 콘텐츠 사업</td>
+					</tr>
+					<tr>
+						<th>해외 계열 법인</th>
+						<td>일본, 미국, 프랑스, 중국, 베트남, 대만, 태국, 인도네시아 외</td>
+					</tr>
+					<tr>
+						<th>매출액</th>
+						<td>6조 818억 원 (2021년)</td>
+					</tr>
+					<tr>
+						<th>전체인력</th>
+						<td>4,595명 (본사 기준, 2021년 기준)</td>
+					</tr>
+				</tbody>
+			</table>
+		</dd>
+	</dl>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="callout large secondary">
+        <div class="row">
+            <div class="large-7 columns">
+            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
+            <span><a href="#">제휴제안</a></span>&nbsp;
+            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
+            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
+        </div>
+        <div class="large-5 columns">
+        <ul class="menu vertical">
+            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

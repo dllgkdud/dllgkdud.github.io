@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER Corporation</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.navercorp.com/img/ko/favicon.ico">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(document).foundation();
+    });
+    </script>
+
+	<style>
+    /* initial */
+    ul { list-style:none; }
+    div.row h2 { padding-top: 20px; }
+
+    /* header */
+    .menu>li>a { display: block; line-height: 20px; }
+    .menu-text .logo { font-size: 26px; font-weight: 800; color: #4bd16a; }
+    .top-bar, .top-bar ul { background-color: #fff; }
+    .has-submenu { padding-top: 10px; padding-left: 50px; }
+    .has-submenu a { color: #222; font-weight: 600; }
+    .is-submenu-item { clear: both; background-color: #4bd16a; }
+    .is-submenu-item:hover { background-color: #1ec545; text-decoration: underline; }
+    .is-submenu-item a { color: #fff; font-size: 14px; }
+    .dropdown { width:100%; }
+    .dropdown.menu>li.is-dropdown-submenu-parent>a::after { border-color: #1ec545 transparent transparent; }
+    .large-7.columns a { color: #878890; }
+
+    /* breadcrumb */
+    .breadcrumbs { margin-left: 40px; }
+    .breadcrumbs li { font-size: 14px; font-weight: 600; letter-spacing: -1px; }
+    .breadcrumbs li a { color: #878890; }
+    .breadcrumbs li:not(:last-child)::after { position: relative; margin: 0 0.75rem; opacity: 1; 
+    content: ">"; color: #aaa; }
+
+    /* slide */
+    .orbit { display: block; box-sizing: inherit; }
+    .orbit-container { height: 100%; }
+    .orbit-slide { box-sizing: inherit; position: relative; }
+    .orbit-slide img { width: 100vw; }
+    .slide_text_box { display: block; width: 100%; }
+    .slide_title { position: absolute; top: 50%; left: 10%; font-size: 40px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_title:after { content: ""; clear: both; display: block; }
+    .slide_text { position: absolute; top: 75%; left: 10%; font-size: 16px; 
+    letter-spacing: -1px; color: #fff; }
+    .slide_text:after { content: ""; clear: both; display: block; }
+
+    /* index */
+    .callout.secondary { border: none; background-color: #f8f9fa; color: #878890; }
+    .callout { margin-top: 50px; border: none; border-right: 1px solid #eee; }
+    .callout:first-child { font-size: 14px; font-weight: 600; }
+    .large-7 .logo { padding-bottom: 7px; padding-right: 10px; }
+    .lead { display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .subheader { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+    .cell-id { font-size: 20px; }
+
+    /* agree */
+    .agree { width: 1000px; white-space:pre-wrap; margin: 10px auto; padding: 24px; border:1px solid #eee; 
+    height:600px; overflow-y:auto; }
+    .form-check { text-align: left; padding-left: 100px; }
+    .form-idCk p { text-align: left; margin-bottom: 0; font-size: 14px; }
+    .container form p { text-align: left; font-size: 12px; }
+
+    /* naver */
+    .info { margin: 70px auto; }
+    .info h2, .info h5 { letter-spacing: -1px; }
+    .info a { width: 50%; }
+    .info dl h4 { font-weight: 600; }
+    .info .medium-8 { padding-bottom: 3rem; }
+    .large-9 table { border: none; border-top: 2px solid #222; }
+    .large-9 th{ text-align: left; }
+    #his-sub-checked strong { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    .info .his-sub-title { color: #bac2cd; cursor: pointer; }
+    .info .his-sub-title strong:hover { color: #333; font-weight: 600; border-bottom: 3px solid #00c73c; }
+    #his-table table { border-top: none; }
+    #his-table th, #his-table td { background-color: #fff; }
+    #his-year { font-size: 22px; }
+    #his-month { width: 100px; text-align: right; }
+
+    /* service */
+    #val-content { margin: 60px 0; padding-right: 40px; color: #606167; font-size: 16px; line-height: 1.8; letter-spacing: -1px; }
+    .val-image { position: relative; width: 100%; }
+    .gif { position: absolute; top: 450px; left:0; }
+    .large-9 th { width: 100px; }
+    .content_box_button { border-bottom: 1px solid #222; }
+    .btn_text { padding: 1.5rem; text-align: right; font-size: 14px; }
+    .btn_text span { font-weight: 600; letter-spacing: -1px; }
+    .btn_text a { margin-right: 20px; }
+    .circle { display: inline-block; width: 40px; height: 40px; background-color: #ddd; border-radius: 50%; padding-top: 6px; padding-right: 10px; text-align: right; }
+    .circle:after { content: ""; clear: both; white-space: nowrap; }
+    .circle:hover { background-color: #00c73c; }
+
+    /* news */
+
+    /* board */
+
+    </style>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+    <nav class="top-bar">
+        <div class="top-bar-left" id="gnb">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><a href="/" class="logo">NAVER</a></li>
+                <li class="has-submenu">
+                    <a href="#">네이버</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="./profile.html">네이버 소개</a></li>
+                        <li><a href="./history1.html">주요 연혁</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">가치실현</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="../service/value.do">원칙</a></li>
+                        <li><a href="../service/business.do">정책</a></li>
+                        <li><a href="../service/impact.do">임팩트</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="../news/list.do">홍보</a></li>
+                <li class="has-submenu">
+                    <a href="#">서비스</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="../board/list.do">공지사항</a></li>
+                        <li><a href="../data/list.do">자료실</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="https://recruit.navercorp.com/">채용</a></li>
+            </ul>
+        </div>   
+    </nav>
+</header>
+
+<!-- breadcrumb -->
+<div class="grid-x cell">
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">홈</a></li>
+			<li><a href="#">네이버</a></li>
+			<li>
+				<span class="show-for-sr">Current: </span> 주요 연혁
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- content -->
+<div class="row column text-center">
+	<div class="info">
+		<h2><strong>연혁</strong></h2><br>
+		<h5 class="his-sub-title" id="his-sub-checked"><strong>주요연혁</strong></h5>
+		<a href="./history2.html"><h5 class="his-sub-title"><strong>수상내역</strong></h5></a>
+	</div>
+</div>
+<div class="grid-container full">
+	<img src="/resources/upload/images/img_spot_history.jpg" style="width: 100vw;" alt="연혁 소개 이미지">
+</div>
+<div class="grid-x align-center info">
+	<dl class="cell medium-8">
+		<h4 class="large-3 columns">현재 - 2010</h4>
+		<dd class="large-9 columns" id="his-table">
+			<table>
+				<tbody>
+					<tr>
+						<th id="his-year">2022</th>
+						<td id="his-month">03월</td>
+						<td>네이버웹툰, ‘이북 이니셔티브 재팬’ 인수</td>
+					</tr>
+					<tr>
+						<th id="his-year">2021</th>
+						<td id="his-month">03월</td>
+						<td>라인-Z홀딩스 경영통합</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">05월</td>
+						<td>글로벌 No. 1 웹소설 플랫폼 '왓패드' 인수</td>
+					</tr>
+					<tr>
+						<th id="his-year">2019</th>
+						<td id="his-month">11월</td>
+						<td>네이버파이낸셜 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year">2018</th>
+						<td id="his-month">02월</td>
+						<td>캠프모바일 합병</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">04월</td>
+						<td>홍콩과학기술대학교(HKUST)와 공동 AI 연구소 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">08월</td>
+						<td>네이버웹툰, IP 브릿지 컴퍼니 스튜디오N 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year">2017</th>
+						<td id="his-month">01월</td>
+						<td>미래기술 별도 법인 네이버랩스(주) 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">05월</td>
+						<td>네이버웹툰(주), 별도법인 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">06월</td>
+						<td>AI 연구소 제록스리서치센터유럽(XRCE) 인수<br>
+						스타트업 인큐베이터 스테이션F에 '스페이스 그린' 오픈</td>
+					</tr>
+					<tr>
+						<th id="his-year">2016</th>
+						<td id="his-month">07월</td>
+						<td>라인주식회사, 뉴욕 및 도쿄증시 동시 상장</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">08월</td>
+						<td>스노우 주식회사 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year">2015</th>
+						<td id="his-month">04월</td>
+						<td>기업용 협업 서비스 전담 자회사 웍스모바일(Works Mobile) 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">06월</td>
+						<td>SW교육플랫폼 개발사 엔트리코리아 인수</td>
+					</tr>
+					<tr>
+						<th id="his-year">2014</th>
+						<td id="his-month">07월</td>
+						<td>네이버비즈니스플랫폼(주) 광고 및 플랫폼 사업 부분, 네이버(주)로 합병</td>
+					</tr>
+					<tr>
+						<th id="his-year">2013</th>
+						<td id="his-month">03월</td>
+						<td>LINE 글로벌 사업 전담 라인플러스(LINE+) 설립<br>
+						모바일 사업 전담 자회사 '캠프모바일' 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">04월</td>
+						<td>NHN 재팬, '라인 주식회사'로 사명 변경 및 게임사업 분리</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">06월</td>
+						<td>데이터센터 각 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">08월</td>
+						<td>NHN(주), 네이버(주)로 사명 변경 및 게임사업 분리</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">12월</td>
+						<td>캠프모바일, 대만 후스콜 서비스 업체 고고룩 인수</td>
+					</tr>
+					<tr>
+						<th id="his-year">2012</th>
+						<td id="his-month">01월</td>
+						<td>NHN 재팬, 네이버 재팬, 라이브도어 등 3개 법인 NHN재팬으로 통합</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">04월</td>
+						<td>취약 계층 고용 창출위해 웹젠과 공동 투자, (주)더사랑 계열사 추가</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">08월</td>
+						<td>싱가포르 법인 NHN Singapore PTE.LTD 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year">2011</th>
+						<td id="his-month">01월</td>
+						<td>스마트 디바이스 게임 개발사 오렌지크루(주) 계열회사로 추가<br>
+						NHN 비즈니스 플랫폼, 네이버에 자체 광고 전면 시행</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">04월</td>
+						<td>NTS(NHN Technology Services)(주), 계열사로 추가</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">09월</td>
+						<td>NHN-KT 합작법인 칸커뮤니케이션즈(주) 계열회사로 추가</td>
+					</tr>
+					<tr>
+						<th id="his-year">2010</th>
+						<td id="his-month">01월</td>
+						<td>NHN(주), 여성부와 '여성친화 기업문화 확산 위한 협약' 체결</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">04월</td>
+						<td>NHN, 신사옥 그린팩토리 입주<br>
+						NHN재팬, 라이브도어(livedoor.com) 인수<br>
+						여유자금 운용 및 벤처투자 등 투자전문사업 NHN Investment 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">05월</td>
+						<td>NHN 문화재단 설립(現 네이버 문화재단) 설립</td>
+					</tr>
+					<tr>
+						<th id="his-year"></th>
+						<td id="his-month">07월</td>
+						<td>NHN 소셜엔터프라이즈. 고용노동부 사회적 기업 인증 획득 및 사명 엔비전스로 변경<br>
+						NHN, 윙버스 흡수 합병</td>
+					</tr>
+				</tbody>
+			</table>
+		</dd>
+	</dl>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="callout large secondary">
+        <div class="row">
+            <div class="large-7 columns">
+            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
+            <span><a href="#">제휴제안</a></span>&nbsp;
+            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
+            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
+        </div>
+        <div class="large-5 columns">
+        <ul class="menu vertical">
+            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
