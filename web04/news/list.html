@@ -19,7 +19,6 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
-    <script type="text/javascript" src="/resources/ckeditor/ckeditor.js"></script>
     <script>
     $(document).ready(function(){
         $(document).foundation();
@@ -110,6 +109,17 @@
     .circle:hover { background-color: #00c73c; }
 
     /* news */
+    .row h2 { margin-bottom: 50px; }
+    .thumbnail { -webkit-box-shadow: none; box-shadow: none; }
+    .content-box-report { max-height: 350px; margin-bottom: 50px; overflow: hidden; text-overflow: ellipsis; }
+    .content-box-report a { font-weight: 600; color: #222; letter-spacing: -1px; }
+    .content-box-report a:hover { text-decoration: underline; }
+    .content table { margin-top: 30px; }
+    .content_box { border: none; }
+    .content_box tr:last-child { text-align: left; border-top: 1px solid #222; }
+    .content_box td { background-color: #fff; }
+    .content_box tr:nth-child(2) td { font-size: 20px; font-weight: 600; color: #00c73c; }
+    .content_box tr:last-child td { padding-top: 50px; }
 
     /* board */
 
@@ -158,10 +168,9 @@
 	<nav aria-label="You are here:" role="navigation">
 		<ul class="breadcrumbs">
 			<li><a href="#">홈</a></li>
-			<li><a href="#">서비스</a></li>
-			<li><a href="#">자료실</a></li>
+			<li><a href="#">홍보</a></li>
 			<li>
-				<span class="show-for-sr">Current: </span> 자료실상세
+				<span class="show-for-sr">Current: </span> 보도자료
 			</li>
 		</ul>
 	</nav>
@@ -169,66 +178,54 @@
 
 <!-- content -->
 <div class="row column text-center">
-	<h2>자료실상세</h2>
-	<hr>
-	<table>
-		<tbody>
-			<tr>
-				<th>DNO</th>
-				<td>1</td>
-			</tr>
-			<tr>
-				<th>Title</th>
-				<td>게시판 샘플1</td>
-			</tr>
-			<tr>
-                <th>Content</th>
-		        <td>
-                    <p><img alt="" src="/resources/uploadckImg/d1ca9adf-0669-4b1a-b86e-61eaeddc756d_fes1-1.png" style="height:364px; width:546px" /></p>
-                    <p>게시판 샘플1</p>
-                </td>
-			</tr>
-			<tr>
-		      <th>Content</th>
-		      <td>admin</td>
-			</tr>
-			<tr>
-		      <th>RegDate</th>
-		      <td>2022-12-01 18:03:34.0</td>
-		    </tr>
-		    <tr>
-		    <th>Visited</th>
-		      <td>23</td>
-		    </tr>
-	  </tbody>
-	</table>
-	<button class="button-group">
-		<a href="/data/list.do" class="button">목록</a>
-		<!--<a href="/data/delete.do?dno=1" class="button">삭제</a>		
-		<a href="/data/update.do?dno=1" class="button">수정</a>-->
-        <a href="/data/list.html" class="button">삭제</a>
-        <a href="/data/updatedodno1.html" class="button">수정</a>
-	</button>
+	<h2>보도자료</h2>
+	<article class="grid-container">
+		<div class="grid-x grid-margin-x small-up-2 medium-up-3">
+			
+			<div class="cell content-box-report">
+				<img class="thumbnail" src="/resources/upload/images/img_news_no_image.png">
+				<h5><a href="/news/detaildonno1.html">네이버웹툰, 2022년 결산 서비스 ‘2022 위드 웹툰(with WEBTOON) 나의 웹툰 리포트’ 공개</a></h5>
+				<p>
+                    <p>네이버웹툰과 시리즈는 오늘(12일)부터 31일까지 웹과 앱 이용자 개개인의 열람 이력을 분석한 &lsquo;2022 위드 웹툰 나의 웹툰 리포트(이하, &lsquo;웹툰 리포트&rsquo;)&rsquo;와 &lsquo;2022 위드 시리즈, 나의 시리즈 리포트(이하, &lsquo;시리즈 리포트&rsquo;)&rsquo;를 앱(APP)에서 각각 공개한다.</p>
+                    <p><img alt="" src="/news/ckImgSubmit.do?uid=aa5152e7-c8f4-4182-8b7c-32eda8236f02&amp;fileName=news1.png" style="height:225px; width:400px" /></p>
+                    <p>이번 리포트는 2022년 1월부터10월까지 이용자의 열람 이력을 분석해 맞춤형 연말 결산 데이터를 제공한 것이 특징이다.&nbsp;</p>
+                    <p>웹툰 리포트에서는 ▲나의 열람 요약(열람 일수 및 회차 수) ▲나의 열람 유형(나의 열람 유형과 비슷한 웹툰 캐릭터 공개) ▲나의 베스트 웹툰(장기 열람 및 가장 많은 회차를 읽은 작품) ▲독자 추천 웹툰(나의 감상 이력과 유사한 이용자 선호 작품)을 확인할 수 있다. 웹툰 리포트에 따르면, 네이버웹툰 서비스 이용자들은 올 한 해 평균 938개 회차를 감상한 것으로 나타났다.</p>
+                    <p>이용자 개별 데이터와 함께 성별에 따른 ▲인기순 BEST(올해 많은 독자들이 열람한 작품), ▲슈퍼루키 BEST(올해 오픈한 신작 중 많은 독자들이 열람한 작품), ▲쿠키도둑 BEST(작품을 열람한 독자 중 유료 결제 비중이 높은 작품)도 발표한다.</p>
+                </p>
+				<p>2022-12-13 14:31:28.0</p>
+			</div>
+			
+			<div class="cell content-box-report">
+				<img class="thumbnail" src="/resources/upload/images/img_news_no_image.png">
+				<h5><a href="/news/detaildonno1.html">네이버클라우드, 신용정보에 따른 관심사 분석을 위한 '네이버·나이스평가정보 결합 데이터' 출시</a></h5>
+				<p>
+                    <p>네이버클라우드(대표 박원기&middot;김유원)가 네이버, NICE평가정보(이하 NICE)와 업무 협약을 체결하고, 자산/소득에 따른 이용자 관심 분야를 분석할 수 있도록 클라우드 데이터 박스(Cloud Data Box) 내에 &lsquo;네이버&middot;나이스평가정보 결합 데이터 옵션&rsquo;을 출시했다고 밝혔다.</p>
+                    <p>클라우드 데이터 박스는 안전한 빅데이터 환경에서 다각도로 데이터를 분석해 비즈니스 인사이트를 발굴할 수 있는 종합 분석 서비스다. 고객의 구매 여정 분석을 위해 네이버 사용자의 검색클릭, 쇼핑검색, 쇼핑구매 데이터가 제공되던 기존 옵션에, 네이버 사용자 관심사 및 구매 의도 데이터와 국내 최대 개인&middot;기업 종합 신용조회회사인 NICE의 신용 정보를 결합해 새로운 옵션을 출시했다.</p>
+                    <p>신규 옵션은 네이버가 보유한 25개 중분류 및 310개의 소분류로 구분된 콘텐츠 소비 기반 중장기 관심사와 34개 중분류 및 588개 소분류로 구분된 검색&middot;클릭 기반 구매의도 데이터에 NICE가 보유한 카드 거래 실적, 신용평점 등 신용 정보 140여 개 항목을 결합해 제작됐다.</p>
+                    <p>클라우드 데이터 박스의 신규 옵션을 통해 고객군의 신용도나 소득 수준 등에 따른 관심사 및 구매의도 지표를 분석하면 구매 패턴, 대출 수요 예측 및 광고&middot;마케팅 전략을 효과적이고 구체적으로 수립할 수 있다. 신용거래 수요가 있는 특정 고객군의 주요 관심사와 구매 의도를 파악해 금융권과 협업을 모색할 수도 있다.</p>
+                </p>
+				<p>2022-12-13 15:19:07.0</p>
+			</div>
+			
+			<div class="cell content-box-report">
+				<img class="thumbnail" src="/resources/upload/images/img_news_no_image.png">
+				<h5><a href="/news/detaildonno1.html">키워드 리뷰로 네이버 로컬검색 새로워진다 … SME의 특징이 조명되고 사용자 검색의도엔 더 정확한 결과제공</a></h5>
+				<p>
+                    <p>네이버㈜(대표이사 최수연)에 축적된 수 많은 키워드 리뷰가 네이버 검색기술과 결합해 더 풍성한 로컬검색 생태계를 만든다.</p>
+                    <p>네이버는 키워드 리뷰를 통해 쌓인 ▲키워드 ▲텍스트ㆍ사진 정보를 네이버 검색결과에 반영했다. 리뷰를 통해 확인된 업체의 &lsquo;특징&rsquo;들이 검색결과에 반영됨에 따라, 사용자는 검색의도에 맞춰 보다 세분화된 로컬정보를 탐색할 수 있게 된다.</p>
+                    <p><strong>[1년 4개월간 쌓인 &lsquo;키워드 리뷰&rsquo; 데이터로 로컬검색도 업체의 &lsquo;특징&rsquo;을 중심으로]</strong></p>
+                    <p>먼저, 네이버 검색결과에 &lsquo;키워드 리뷰 필터&rsquo;가 도입됐다. 이미 제공되던 &lsquo;영업 중인 업체 정보&rsquo; 필터나 &lsquo;메뉴 별 업체 정보&rsquo; 필터에 더해, ▲특별한 날 가기 좋아요 ▲사진이 잘 나와요 등 업체의 &lsquo;특징&rsquo;을 중심으로 정보를 모아볼 수 있다. 지난해 7월, 네이버가 업체의 특징과 개성을 위주로 리뷰하는 &lsquo;키워드 리뷰&rsquo; 시스템을 선보이고 약 1년 4개월 간 쌓인 데이터가 검색영역서도 유의미한 활용성을 띠게 된 것이다. 키워드 리뷰 필터는 우선 음식점 업종을 대상으로 적용되며 내년부터 대상 업종이 확대될 예정이다.</p>
+                    <p><img alt="" src="/news/ckImgSubmit.do?uid=18603aad-920c-4eb8-ae80-652250c99aad&amp;fileName=news3.png" style="height:548px; width:400px" /></p>
+                </p>
+				<p>2022-12-13 15:28:45.0</p>
+			</div>
+			
+		</div>
+		<button class="button-group">
+			<a href="/news/insert.html" class="button">작성</a>
+		</button>
+	</article>
 </div>
-</div>
-
-<!-- footer -->
-<footer id="footer">
-    <div class="callout large secondary">
-        <div class="row">
-            <div class="large-7 columns">
-            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
-            <span><a href="#">제휴제안</a></span>&nbsp;
-            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
-            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
-        </div>
-        <div class="large-5 columns">
-        <ul class="menu vertical">
-            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
-        </ul>
-        </div>
-    </div>
-    </div>
 </footer>
 </body>
 </html>

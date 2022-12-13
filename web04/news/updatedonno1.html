@@ -110,6 +110,17 @@
     .circle:hover { background-color: #00c73c; }
 
     /* news */
+    .row h2 { margin-bottom: 50px; }
+    .thumbnail { -webkit-box-shadow: none; box-shadow: none; }
+    .content-box-report { max-height: 350px; margin-bottom: 50px; overflow: hidden; text-overflow: ellipsis; }
+    .content-box-report a { font-weight: 600; color: #222; letter-spacing: -1px; }
+    .content-box-report a:hover { text-decoration: underline; }
+    .content table { margin-top: 30px; }
+    .content_box { border: none; }
+    .content_box tr:last-child { text-align: left; border-top: 1px solid #222; }
+    .content_box td { background-color: #fff; }
+    .content_box tr:nth-child(2) td { font-size: 20px; font-weight: 600; color: #00c73c; }
+    .content_box tr:last-child td { padding-top: 50px; }
 
     /* board */
 
@@ -158,10 +169,9 @@
 	<nav aria-label="You are here:" role="navigation">
 		<ul class="breadcrumbs">
 			<li><a href="#">홈</a></li>
-			<li><a href="#">서비스</a></li>
-			<li><a href="#">자료실</a></li>
+			<li><a href="#">홍보</a></li>
 			<li>
-				<span class="show-for-sr">Current: </span> 자료실상세
+				<span class="show-for-sr">Current: </span> 보도자료
 			</li>
 		</ul>
 	</nav>
@@ -169,66 +179,42 @@
 
 <!-- content -->
 <div class="row column text-center">
-	<h2>자료실상세</h2>
+	<h2>보도자료</h2>
 	<hr>
-	<table>
-		<tbody>
-			<tr>
-				<th>DNO</th>
-				<td>1</td>
-			</tr>
-			<tr>
-				<th>Title</th>
-				<td>게시판 샘플1</td>
-			</tr>
-			<tr>
-                <th>Content</th>
-		        <td>
-                    <p><img alt="" src="/resources/uploadckImg/d1ca9adf-0669-4b1a-b86e-61eaeddc756d_fes1-1.png" style="height:364px; width:546px" /></p>
-                    <p>게시판 샘플1</p>
-                </td>
-			</tr>
-			<tr>
-		      <th>Content</th>
-		      <td>admin</td>
-			</tr>
-			<tr>
-		      <th>RegDate</th>
-		      <td>2022-12-01 18:03:34.0</td>
-		    </tr>
-		    <tr>
-		    <th>Visited</th>
-		      <td>23</td>
-		    </tr>
-	  </tbody>
-	</table>
-	<button class="button-group">
-		<a href="/data/list.do" class="button">목록</a>
-		<!--<a href="/data/delete.do?dno=1" class="button">삭제</a>		
-		<a href="/data/update.do?dno=1" class="button">수정</a>-->
-        <a href="/data/list.html" class="button">삭제</a>
-        <a href="/data/updatedodno1.html" class="button">수정</a>
-	</button>
+	<form action="/news/update.do" method="post">
+		<table>
+			<tbody>
+				<tr>
+					<th>제목</th>
+					<td>
+						<input type="hidden" name="nno" id="nno" value="1" >
+						<input type="text" name="ntitle" id="ntitle" placeholder="제목을 입력하십시오." value="네이버웹툰, 2022년 결산 서비스 ‘2022 위드 웹툰(with WEBTOON) 나의 웹툰 리포트’ 공개" maxlength="300" required />
+					</td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td>
+						<textarea cols="100" rows="10" name="ncontent" id="ncontent" placeholder="내용을 입력하십시오." style="resize: none;" maxlength="2900" required>
+                            <p>네이버웹툰과 시리즈는 오늘(12일)부터 31일까지 웹과 앱 이용자 개개인의 열람 이력을 분석한 &lsquo;2022 위드 웹툰 나의 웹툰 리포트(이하, &lsquo;웹툰 리포트&rsquo;)&rsquo;와 &lsquo;2022 위드 시리즈, 나의 시리즈 리포트(이하, &lsquo;시리즈 리포트&rsquo;)&rsquo;를 앱(APP)에서 각각 공개한다.</p>
+                            <p><img alt="" src="/resources/uploadckImg/aa5152e7-c8f4-4182-8b7c-32eda8236f02_news1.png" style="height:225px; width:400px" /></p>
+                            <p>이번 리포트는 2022년 1월부터10월까지 이용자의 열람 이력을 분석해 맞춤형 연말 결산 데이터를 제공한 것이 특징이다.&nbsp;</p>
+                            <p>웹툰 리포트에서는 ▲나의 열람 요약(열람 일수 및 회차 수) ▲나의 열람 유형(나의 열람 유형과 비슷한 웹툰 캐릭터 공개) ▲나의 베스트 웹툰(장기 열람 및 가장 많은 회차를 읽은 작품) ▲독자 추천 웹툰(나의 감상 이력과 유사한 이용자 선호 작품)을 확인할 수 있다. 웹툰 리포트에 따르면, 네이버웹툰 서비스 이용자들은 올 한 해 평균 938개 회차를 감상한 것으로 나타났다.</p>
+                            <p>이용자 개별 데이터와 함께 성별에 따른 ▲인기순 BEST(올해 많은 독자들이 열람한 작품), ▲슈퍼루키 BEST(올해 오픈한 신작 중 많은 독자들이 열람한 작품), ▲쿠키도둑 BEST(작품을 열람한 독자 중 유료 결제 비중이 높은 작품)도 발표한다.</p>
+                        </textarea>
+						<script>
+							CKEDITOR.replace('ncontent', {filebrowserUploadUrl:'/news/imgUpload.do'});
+						</script>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="button-group">
+			<a href="/news/list.html" class="button">목록</a>
+			<!--<input type="submit" class="submit button" value="등록" />-->
+            <a href="/news/list.html" class="button">등록</a>
+		</button>
+	</form>
 </div>
-</div>
-
-<!-- footer -->
-<footer id="footer">
-    <div class="callout large secondary">
-        <div class="row">
-            <div class="large-7 columns">
-            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
-            <span><a href="#">제휴제안</a></span>&nbsp;
-            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
-            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
-        </div>
-        <div class="large-5 columns">
-        <ul class="menu vertical">
-            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
-        </ul>
-        </div>
-    </div>
-    </div>
 </footer>
 </body>
 </html>
