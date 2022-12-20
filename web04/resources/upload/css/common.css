@@ -1,12 +1,20 @@
 @charset "UTF-8";
 
+/* All Device - 모든 해상도를 위한 공통 코드 */
 /* initial */
-html, body { margin: 0; padding: 0; }
+html, body, dl, dt, dd, ol, ul, li, tr, th, td { margin: 0; padding: 0; }
 div, span { border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
-
 /* display */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, menu, section { display: block; }
 body { line-height: 1; }
-h1, h2, h3, h4, h5, h6, p, a, dl, dt, dd, ol, ul, li tr, th, td { list-style: none; }
+h1, h2, h3, h4, h5, h6, p, a, dl, dt, dd, ol, ul, li, tr, th, td { list-style: none; }
 form, table, article { border: 0; border-collapse: collapse; border-spacing: 0; }
+
+/* Mobile Device - 768px 미만 해상도의 모바일 기기를 위한 코드 */
+@media screen and (max-width:767px) {
+    .menu-text { width: 750px; text-align: center; }
+    .has-submenu { font-size: 12px; }
+    .is-dropdown-submenu-item a { font-size: 12px!important; }
+    .slide_text_box p { display: none; }
+}
