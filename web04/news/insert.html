@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NAVER Corporation</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.navercorp.com/img/ko/favicon.ico">
+    <link rel="stylesheet" href="../resources/upload/css/common.css">
+    <link rel="stylesheet" href="../resources/upload/css/main.css">
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script type="text/javascript" src="../resources/ckeditor/ckeditor.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(document).foundation();
+    });
+    </script>
+    <!-- Hotjar Tracking Code for my site -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3286249,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+<!-- header -->
+<header id="header">
+    <nav class="top-bar">
+        <div class="top-bar-left" id="gnb">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text"><a href="../index.html" class="logo">NAVER</a></li>
+                <li class="has-submenu">
+                    <a href="#">네이버</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="../naver/profile.html">네이버 소개</a></li>
+                        <li><a href="../naver/history1.html">주요 연혁</a></li>
+                        <li><a href="../naver/contact.html">CONTACT</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#">가치실현</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="../service/value.html">원칙</a></li>
+                        <li><a href="../service/business.html">정책</a></li>
+                        <li><a href="../service/impact.html">임팩트</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="./list.html">홍보</a></li>
+                <li class="has-submenu">
+                    <a href="#">서비스</a>
+                    <ul class="submenu menu vertical" data-submenu>
+                        <li><a href="../board/list.html">공지사항</a></li>
+                        <li><a href="../data/list.html">자료실</a></li>
+                        <li><a href="../qna/list.html">질문 및 답변</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="https://recruit.navercorp.com/">채용</a></li>
+            </ul>
+        </div>   
+    </nav>
+</header>
+
+<!-- breadcrumb -->
+<div class="grid-x cell">
+	<nav aria-label="You are here:" role="navigation">
+		<ul class="breadcrumbs">
+			<li><a href="#">홈</a></li>
+			<li><a href="#">홍보</a></li>
+			<li>
+				<span class="show-for-sr">Current: </span> 보도작성
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- content -->
+<div class="row column text-center">
+	<h2>보도작성</h2>
+	<hr>
+	<form action="/data/insert.do" method="post">
+		<table>
+			<tbody>
+				<tr>
+					<th>제목</th>
+					<td><input type="text" name="dtitle" id="dtitle" placeholder="제목을 입력하십시오." maxlength="300" required /></td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td>
+						<textarea cols="100" rows="10" name="dcontent" id="dcontent" placeholder="내용을 입력하십시오." style="resize: none;" maxlength="900" required></textarea>
+						<script>
+							CKEDITOR.replace('dcontent', {filebrowserUploadUrl:'/data/imgUpload.do'});
+						</script>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button class="button-group">
+			<a href="./list.html" class="button">목록</a>
+			<!--<input type="submit" class="submit button" value="등록" />-->
+            <a href="./list.html" class="submit button">등록</a>
+		</button>
+	</form>
+</div>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="callout large secondary">
+        <div class="row">
+            <div class="large-7 columns">
+            <span><img src="https://www.navercorp.com/img/ko/footer_logo.png" class="logo" alt="logo" ></span>
+            <span><a href="#">제휴제안</a></span>&nbsp;
+            <span><a href="#">기업윤리 상담센터</a></span>&nbsp;
+            <span><a href="#"><strong>개인정보처리방침</strong></a></span>
+        </div>
+        <div class="large-5 columns">
+        <ul class="menu vertical">
+            <li style="text-align:center;"><h5>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.</h5></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
