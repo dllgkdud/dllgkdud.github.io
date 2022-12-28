@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- characterSet = 저장된 문서 정보를 한글로 설정 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- device-width = 현재 기계의 폭에 맞추어 가로 조절 initial-scale = 논리적 비율 user-scalable = 앱 내에서 조절가능한 정도 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Vitra | Home</title>
+    <!-- stylesheet/script -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- 문서 정보 : 메타포(metaphor - 정체성) -->
+    <!-- contentType= text/html형식으로 불러오기 -->
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <!-- 문서에 작성된 코드가 깨져서 출력될 경우 코드를 해당 문서에 인식시키는 작업 -->
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+
+    <!-- 검색될 항목 설정 -->
+    <!-- 애플리케이션 이름 -->
+    <meta name="application-name" content="Vitra | Home">
+    <!-- 검색창에 검색되는 주제 -->
+    <meta name="subject" content="Vitra | Home">
+    <!-- 검색창에 검색되어 나타나는 내용 -->
+    <meta name="keywords" content="가구, 가구전시, 의자, 소파, 조명, 인테리어">
+    <!-- 검색창에 검색되어 나타나는 설명 -->
+    <meta name="description" content="Vitra is a Swiss company dedicated to improving the quality of homes, offices and public spaces through the power of design.">
+    <!-- 검색 로봇(검색창에 자동으로 업로드해서 검색될 수 있도록 하는 엔진) 설정 -->
+    <meta name="robots" content="index, flow">
+    <!-- 작성 저자 -->
+    <meta name="author" content="lee ha young">
+    <!-- URL - 검색창 상단에 띄워질 사이트 주소 -->
+    <meta name="url" content="https://dllgkdud.github.io/mobile01">
+
+    <!-- email -->
+    <meta name="email" content="dllgkdud@gmail.com">
+    <!-- 주기적으로 새로고침을 자동 진행(초 단위) -->
+    <meta http-equiv="refresh" content="600">
+    <!-- 페이지 전환 효과 -->
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1, Transition=12)">
+
+    <!-- 앱 미리보기 설정 -->
+    <!-- iOS -->
+    <!--<meta property="al:ios:url" content="ios 앱 URL" />
+    <meta property="al:ios:app_store_id" content="ios 앱스토어 ID" />
+    <meta property="al:ios:app_name" content="ios 앱 이름" />-->
+    <!-- Android -->
+    <!--<meta property="al:android:url" content="안드로이드 앱 URL" />
+    <meta property="al:android:app_name" content="안드로이드 앱 이름" />
+    <meta property="al:android:package" content="안드로이드 패키지 이름" />
+    <meta property="al:web:url" content="안드로이드 앱 URL" />-->
+
+    <!-- 그래픽 특성 별  -->
+    <!-- 오픈 그래프 : 공유 전송 시 썸네일로 보여지는 내용 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dllgkdud.github.io/mobile01">
+    <meta property="og:title" content="Vitra | Home">
+    <meta property="og:site_name" content="Vitra | Home">
+    <!-- 이미지 주소는 절대 주소로 설정 -->
+    <meta property="og:image" content="siteimg.jpg">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="562">
+    <!-- 사이트의 지역(html lang="en"과 비슷한 내용) -->
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- 트위터에 썸네일로 보여지는 내용 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vitra | Home">
+    <meta name="twitter:description" content="Vitra is a Swiss company dedicated to improving the quality of homes, offices and public spaces through the power of design.">
+    <meta name="twitter:image" content="siteimg.jpg">
+
+    <!-- 파비콘(반응형일 때만 적용) -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- 기기 별 파비콘 설정 -->
+    <!-- APPLE -->
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+
+    <!-- 애플 기기 앱 시작화면 -->
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <!-- 애플 기기 url / ui 보이게 설정 -->
+    <meta name="apple-mobile-web-app-capable" href="yes">
+    <!-- 애플 기기 상태바 색상 설정 -->
+    <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+
+    <!-- MS(MicroSoft) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+
+    <!-- 기기 지원 해상도 별 파비콘 설정 -->
+    <link rel="icon" href="/assets/icon/favicon.png">
+    <link rel="icon" href="/assets/icon/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="/assets/icon/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/assets/icon/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="/assets/icon/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="/assets/icon/favicon-128.png" sizes="128x128">
+    
+    <!-- breakpoint - (min-width:320px && max-width:767px):mobile, (min-width:768px && max-width:959px):tablet, 
+    (min-width:960px && max-width:1280px):desktop, (min-width:1281px):HD -->
+    <!-- 반응형 및 모바일에서는 스타일의 크기는(vw(variable width), vh(variable height), %, rem(relative em)등과 같이
+    해당 기기나 콘텐츠의 크기에 상대적인 단위를 사용해서 css 속성 설정.) -->
+    <style>
+    /* 미디어 쿼리(규칙) - 스타일 태그 내에서 중단점(break point)을 지정해 변경하는 것
+    -> 원칙(first mobile - 가장 불규칙한 스마트폰 형태를 먼저 지정) */
+    .ui-icon-custom1:after { background-image:url("./menu.png"); background-position: center center; background-size: 95%;}
+    .toggle { display: none; }
+    #pay { margin-bottom: 1rem; }
+    #pay:nth-child(2) { margin-bottom: 2rem; }
+    #pay:last-child { margin-bottom: 0; }
+    #price { margin-left: 56%; }
+
+    /* 모바일 */
+    @media screen and (max-width:767px) {
+      body, html { margin: 0; padding: 0; }
+      .player .viewer { min-width:320px; width:auto; }
+    }
+    /* 태블릿 */
+    @media screen and (min-width:768px) and (max-width:959px){
+      body, html { margin: 0; padding: 0; }
+      .player { min-width:768px; width:100vw; }
+    }
+    /* 데스크탑 */
+    @media screen and (min-width:960px) {
+      body, html { margin: 0; padding: 0; }
+      .player { min-width:960px; max-width:960px; width:auto; }
+    }
+    </style>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a">
+    <!-- 메인 -->
+    <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="player">
+            <video class="player_video viewer" src="./vdo/Dancing Wall, Stephan Hürlemann, 2018.mp4" id="target_vdo"></video>
+            <button class="player_button toggle" title="Toggle Play">►</button>
+        </div>
+        <script src="./assets/js/custom_video.js"></script>
+        <div data-role="contenter" class="ui-content">
+            <div role="main" class="ui-content">
+                <h2>Home Stories</h2>
+                <p>To add more comfort and cosiness to your home, explore our product selection to welcome the season in and keep you warm.</p>
+            </div>
+            <div class="btn-groups">
+                <a href="#page3" data-transition="fade" class="ui-btn ui-corner-all ui-shadow">DISCOVER MORE</button></a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 메인메뉴이동 -->
+    <div id="page1" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a">
+            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a">
+                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page5" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-d">
+                        <a href="#page52" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-e">
+                        <a href="#page55" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Vitra</h1>
+            <ul class="ui-listview" data-role="listview">
+                <li class="ui-first-child">
+                    <a href="#page11" data-transition="slidefade">Products</a>
+                </li>
+                <li>
+                    <a href="#page12" data-transition="slidefade">Living</a>
+                </li>
+                <li>
+                    <a href="#page13" data-transition="slidefade">Magazine</a>
+                </li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴이동(제품) -->
+    <div id="page11" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a">
+            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a">
+                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-d">
+                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-e">
+                        <a href="#page6" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <a href="#page1"><h1 class="ui-title">BACK</h1></a>
+            <ul class="ui-listview" data-role="listview">
+                <li>
+                    <a href="#page2">Seating</a>
+                </li>
+                <li>
+                    <a href="#page2">Tables</a>
+                </li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴이동(작품) -->
+    <div id="page12" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a">
+            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a">
+                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-d">
+                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-e">
+                        <a href="#page6" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <a href="#page1"><h1 class="ui-title">BACK</h1></a>
+            <ul class="ui-listview" data-role="listview">
+                <li class="ui-first-child">
+                    <a href="#page3">Collection1</a>
+                </li>
+                <li>
+                    <a href="#page3">Collection2</a>
+                </li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴이동(정보) -->
+    <div id="page13" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a">
+            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a">
+                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-d">
+                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-e">
+                        <a href="#page6" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <a href="#page1" data-transition="slidefade"><h1 class="ui-title">BACK</h1></a>
+            <ul class="ui-listview" data-role="listview">
+                <li class="ui-first-child">
+                    <a href="#page4">Exhibitions</a>
+                </li>
+                <li>
+                    <a href="#page4">Designers</a>
+                </li>
+            </ul>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 메인메뉴(제품) -->
+    <div id="page2" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <img src="./assets/img/products-480.jpg">
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">제품</h1>
+            <div role="main" class="ui-content">
+                <ul class="ui-grid-a ui-listview ui-corner-all ui-shadow" data-role="listview">
+                    <li class="ui-block-a ui-li-has-thumb ui-first-child">
+                        <a href="#page21" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/chair-179.jpg">
+                            <h2>Standard</h2>
+                            <p>Jean Prouvé</p>
+                            <p>USD 1,250.00</p>
+                        </a>
+                    </li>
+                    <li class="ui-block-b ui-li-has-thumb">
+                        <a href="#page22" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/table-179.jpg">
+                            <h2>Polder Sofa</h2>
+                            <p>Hella Jongerius</p>
+                            <p>USD 860.00</p>
+                        </a>
+                    </li>
+                    <li class="ui-block-a ui-li-has-thumb">
+                        <a href="#page21" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/chair-179.jpg">
+                            <h2>Chaise Tout Bois</h2>
+                            <p>Jean Prouvé</p>
+                            <p>USD 1,250.00</p>
+                        </a>
+                    </li>
+                    <li class="ui-block-b ui-li-has-thumb">
+                        <a href="#page22" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/table-179.jpg">
+                            <h2>HAL Lounge Chair & Ottoman</h2>
+                            <p>Jasper Morrison</p>
+                            <p>USD 860.00</p>
+                        </a>
+                    </li>
+                    <li class="ui-block-a ui-li-has-thumb">
+                        <a href="#page21" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/chair-179.jpg">
+                            <h2>Grand Relax & Ottoman</h2>
+                            <p>Antonio Citterio</p>
+                            <p>USD 1,250.00</p>
+                        </a>
+                    </li>
+                    <li class="ui-block-b ui-li-has-thumb ui-last-child">
+                        <a href="#page22" class="ui-btn ui-btn-icon-none">
+                            <img src="./assets/img/table-179.jpg">
+                            <h2>Soft Work Table</h2>
+                            <p>Edward Barber & Jay Osgerby</p>
+                            <p>USD 860.00</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(제품1) 상세 -->
+    <div id="page21" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Vitra</h1>
+            <div role="main" class="ui-content">
+                <img src="./assets/img/detail-374.jpg" alt="title">
+                <h2>Standard</h2>
+                <h3>Jean Prouvé, 1934/1950</h3>
+                <p>The Standard chair by Jean Prouvé has evolved into one of the most famous classics of the French 'constructeur'. The seat and backrest of this understated, iconic chair are available in various types of wood, and the metal frame comes in different colours.</p>
+                <h4>USD 1,250.00</h4>
+            </div>
+            <div class="btn-groups">
+                <a href="#page56" class="ui-btn" data-rel="dialog" data-transition="pop">CONFIGURE</a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(제품2) 상세 -->
+    <div id="page22" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Vitra</h1>
+            <div role="main" class="ui-content">
+                <img src="./assets/img/detaiil-374.jpg" alt="title">
+                <h2>Soft Work Table</h2>
+                <h3>Edward Barber & Jay Osgerby, 2021</h3>
+                <p>The Soft Work Table is not just a sofa side table – it is also specifically designed for teamwork. The slender x-shaped base, which is optionally equipped with castors or glides, allows users to sit in varied positions. The top is available in a round or boat-shaped version, at heights of 45 and 71 cm. The table can be integrated in a wide range of Soft Work configurations.</p>
+                <h4>USD 860.00</h4>
+            </div>
+            <footer data-role="footer" class="ui-footer" data-theme="a">
+                <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+            </footer>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 메인메뉴(작품) -->
+    <div id="page3" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <img src="./assets/img/living-1440.jpg" alt="title">
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">living</h1>
+            <div role="main" class="ui-content">
+                <h2>Home Stories</h2>
+                <p>This winter, we take a look behind the doors of three homes. First, we will visit the house of art collectors Karin and Xavier Donck in the old quarter of Ghent. We are then invited to the rural haven of stylist Adeline and farmer Florent Maillet. And finally, artist Paul Schrader welcomes us to his urban oasis in Hamburg, where he both lives and works. These three spaces and their interiors are as different as their residents which is reflected in the selection of Vitra products..</p><br>
+                <h3>Product Categories</h3>
+                <a href="#page31">
+                    <img src="./assets/img/colcate1-350.jpg" alt="sub">
+                    <p>Lounge chairs</p>
+                </a>
+                <a href="#page32">
+                    <img src="./assets/img/colcate2-350.jpg" alt="sub">
+                    <p>Jean Prouvé Collection</p>
+                </a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(작품1) 상세 -->
+    <div id="page31" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <img src="./assets/img/col1-1024.jpg" alt="title">
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Collection1</h1>
+            <div role="main" class="ui-content">
+                <h2>Lounge Chairs</h2>
+                <p>Comfort, softness, and an inviting appearance – these are the classic characteristics of a lounge chair. But to be truly great, a chair must offer more than just the standard elements.</p><br>
+                <img src="./assets/img/colcate1-350.jpg" alt="col">
+                <img src="./assets/img/colcate1-350.jpg" alt="col">
+                <img src="./assets/img/colcate1-350.jpg" alt="col"><br>
+                <h2>The Making of a Great Lounge Chair</h2>
+                <p>The Italian designer and architect Antonio Citterio has worked with Vitra for over 40 years. ‘Making a lounge chair at Vitra in the shadow of Charles and Ray Eames is something of a designer’s nightmare.</p><br><br>
+                <img src="./assets/img/colcate1-350.jpg" alt="col">
+                <h2>Olive leaf tanned leather</h2>
+                <p>A tanning agent extracted from olive tree leaves – a waste product of the olive harvest – is used to produce the superior-grade Leather Premium F. The entire production process is carried out with as few chemicals as possible in order to minimise the impact on the environment.</p>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(작품2) 상세 -->
+    <div id="page32" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <img src="./assets/img/colcate2-1440.jpg" alt="title">
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Jean Prouvé Collection</h1>
+            <div role="main" class="ui-content">
+                <h2>Lounge Chairs</h2>
+                <p>A chair by Jean Prouvé marked the beginning of furniture manufacturer Vitra’s relationship with the work of French designer Jean Prouvé. Even after more than twenty years, the collaboration with his heirs still remains active and strong: Vitra is now revising the collection with new colours and introducing a number of lesser known designs.</p><br>
+                <img src="./assets/img/colcate2-350.jpg" alt="col">
+                <img src="./assets/img/colcate2-350.jpg" alt="col">
+                <img src="./assets/img/colcate2-350.jpg" alt="col"><br>
+                <h2>New colours of the Jean Prouvé Collection</h2>
+                <p>The colours Prouvé developed for his furniture drew on various references – from his Blé Vert, which describes the colour of young green wheat, to Gris Vermeer, which alludes to the grey tones in the work of the painter Johannes Vermeer.</p><br><br>
+                <img src="./assets/img/colcate2-350.jpg" alt="col">
+                <h2>The Jean Prouvé Collection at the Vitra Design Museum</h2>
+                <p>The Vitra Design Museum in Weil am Rhein, Germany, is home to the world’s most extensive Jean Prouvé museum collection. It dates back to the 1980s when Rolf Fehlbaum (Chairman Emeritus at Vitra) acquired the first Jean Prouvé design, an Antony chair that he found in Paris, sparking Fehlbaum’s interest in the work of Jean Prouvé.</p>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 메인메뉴(정보) -->
+    <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <img src="./assets/img/magazine-450.jpg" alt="title">
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title"></h1>
+            <div role="main" class="ui-content">
+                <h2>Magazine</h2>
+                <p>Page content goes here.</p>
+
+                <a href="#page41">
+                    <h3>Product Categories</h3>
+                    <img src="./assets/img/ex1-350.jpg" alt="ex">
+                </a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(전시) 상세 -->
+    <div id="page41" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Vitra</h1>
+            <div role="main" class="ui-content">
+                <img src="./assets/img/detail-374.jpg" alt="title">
+                <h2>Standard</h2>
+                <h3>Jean Prouvé, 1934/1950</h3>
+                <p>Page content goes here.</p>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(디자이너) 상세 -->
+    <div id="page42" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">Vitra</h1>
+            <div role="main" class="ui-content">
+                <img src="./assets/img/detail-374.jpg" alt="title">
+                <h2>Standard</h2>
+                <h3>Jean Prouvé, 1934/1950</h3>
+                <p>Page content goes here.</p>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 메인메뉴(회원 - 로그인) -->
+    <div id="page5" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">로그인</h1>
+            <div role="main" class="ui-content">
+                <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                    <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                        <label for="id">ID</label>
+                        <input type="text" name="id" id="id" placeholder="아이디">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <label for="pw">Password</label>
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호"><br>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="ui-btn-group">
+                <button type="reset" class="ui-btn ui-btn-inline">취소</button>
+                <button type="submit" class="ui-btn ui-btn-inline ui-btn-b">로그인</button>
+                <a href="#page51">회원가입</a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(가입) 상세 -->
+    <div id="page51" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <form>
+                    <ul class="ui-grid-b">
+                        <li class="ui-block-a">
+                            <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                                <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                            </a>
+                        </li>
+                        <li class="ui-block-b">
+                            <a href="#page0" data-theme="a">
+                                <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            </a>
+                        </li>
+                        <li class="ui-block-c">
+                            <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                                <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </form>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title"></h1>
+            <div role="main" class="ui-content">
+                <form>
+                    <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                        <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                            <label for="id">ID</label>
+                            <input type="text" name="id" id="id" placeholder="아이디">
+                            <button type="button" class="ui-btn ui-btn-inline">중복체크</button>
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <label for="pw">Password</label>
+                            <input type="password" name="pw" id="pw" placeholder="비밀번호"><br>
+                            <label for="pw2">Password Check</label>
+                            <input type="password" name="pw2" id="pw2" placeholder="비밀번호확인">
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="이메일">
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit ui-last-child">
+                            <label for="date">Birth</label>
+                            <input type="date" name="date" id="date" placeholder="생일">
+                        </li>
+                    </ul>
+                </div>
+                <div data-role="container">
+                    <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                        <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">약관동의</li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <label for="textarea-a">이용약관</label>
+                            <textarea name="textarea" id="textarea-a">
+I'm a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
+                            </textarea>
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <label for="textarea-a">개인정보처리방침</label>
+                            <textarea name="textarea" id="textarea-a">
+I'm a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
+                            </textarea>
+                        </li>
+                        <li class="ui-btn-group">
+                            <button type="reset" class="ui-btn ui-btn-inline">취소</button>
+                            <button type="submit" class="ui-btn ui-btn-inline ui-btn-b">회원가입</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(공지목록) 상세 -->
+    <div id="page52" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">공지사항</h1>
+            <div role="main" class="ui-content">
+                <table data-role="table" id="table-column-toggle" data-mode="columntoggle" data-enhanced="true" class="ui-table ui-table-columntoggle" data-column-btn-theme="b">
+                    <thead>
+                        <tr>
+                            <th data-priority="2" data-colstart="1" class="ui-table-priority-2 ui-table-cell-visible">번호</th>
+                            <th data-colstart="2">제목</th>
+                            <th data-priority="3" data-colstart="3" class="ui-table-priority-3 ui-table-cell-visible">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="ui-table-priority-2 ui-table-cell-visible">1</th>
+                            <td><a href="#page51" data-rel="external">Citizen Kane</a></td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">1941</td>
+
+                        </tr>
+                        <tr>
+                            <th class="ui-table-priority-2 ui-table-cell-visible">2</th>
+                            <td><a href="#page51" data-rel="external">Casablanca</a></td>
+                            <td class="ui-table-priority-3 ui-table-cell-visible">1942</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-btn-group">
+                <a href="#page52"><button class="ui-btn ui-btn-inline">작성</button></a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(공지상세) 상세 -->
+    <div id="page53" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">공지사항 상세</h1>
+            <div role="main" class="ui-content">
+                <table data-role="table" id="my-table" data-mode="reflow">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>내용</th>
+                            <th><abbr title="id">작성자</abbr></th>
+                            <th>작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Citizen Kane</td>
+                            <td>1941</td>
+                            <td>100%</td>
+                            <td>74</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui-btn-group">
+                <a href="#page5"><button class="ui-btn ui-btn-inline">삭제</button></a>
+                <a href="#page53"><button class="ui-btn ui-btn-inline">수정</button></a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(공지작성) 상세 -->
+    <div id="page54" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title">공지사항 작성</h1>
+            <div role="main" class="ui-content">
+                <table data-role="table" id="my-table" data-mode="reflow">
+                    <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                        <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                            <label for="title">제목</label>
+                            <input type="text" name="title" id="title" placeholder="제목">
+                        </li>
+                        <li class="ui-field-contain ui-li-static ui-body-inherit">
+                            <label for="content">내용</label>
+                            <textarea name="content" id="content" cols="100" rows="10" placeholder="내용"></textarea>
+                        </li>
+                    </ul>
+                </table>
+              </div>
+            <div class="ui-btn-group">
+                <a href="#page5"><button class="ui-btn ui-btn-inline">취소</button></a>
+                <a href="#page5"><button class="ui-btn ui-btn-inline ui-btn-b">작성</button></a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a">
+            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(장바구니) 상세 -->
+    <div id="page55" data-role="page" class="ui-page ui-page-theme-a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
+            <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page2" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div data-role="content" class="ui-content">
+            <h1 class="ui-title"></h1>
+            <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">
+                    cart
+                    <span class="ui-li-count ui-body-inherit">1</span>
+                </li>
+                <li>
+                    <a href="#page21" class="ui-btn ui-li-has-thumb ui-btn-icon-right ui-icon-carat-r">
+                        <img src="./assets/img/chair-179.jpg">
+                        <h2>Standard</h2>
+                        <p><strong>- 1 +</strong></p>
+                        <p>$ 1,200.00</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="content" class="ui-content">
+            <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
+                <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">payment</li>
+                <li>
+                    <div id="pay"><span><strong>Subtotal</strong></span><span id="price">$ 1,270.00</span></div>
+                    <div id="pay"><span><strong>Shipping</strong></span><span id="price">$ 30.00</span></div>
+                    <div id="pay"><span><strong>Total</strong></span><span id="price">$ 1,300.00</span></div>
+                </li>
+            </ul>
+            <div class="btn-groups">
+                <a href="#page0" data-transition="fade" class="ui-btn ui-corner-all ui-shadow">CHECKOUT</button></a>
+            </div>
+        </div>
+        <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
+            <h5 class="ui-title" role="heading">COPYRIGHT ©2022 VITRA INTERNATIONAL AG. ALL RIGHTS RESERVED</h5>
+        </footer>
+    </div>
+    <!-- 서브메뉴(장바구니) 팝업 -->
+    <div id="page56" data-role="page" class="ui-page ui-page-theme-a">
+        <div data-role="content" class="ui-content">
+            <p class="ui-title">제품이 장바구니에 담겼습니다.</p>
+            <p>장바구니를 확인하시겠습니까?</p>
+            <div class="btn-groups">
+                <a href="#page21" class="ui-btn ui-btn-inline">아니오</a>
+                <a href="#page55" class="ui-btn ui-btn-inline ui-btn-b">예</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
