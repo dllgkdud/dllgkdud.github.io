@@ -107,25 +107,28 @@
     /* 미디어 쿼리(규칙) - 스타일 태그 내에서 중단점(break point)을 지정해 변경하는 것
     -> 원칙(first mobile - 가장 불규칙한 스마트폰 형태를 먼저 지정) */
     .ui-icon-custom1:after { background-image:url("./menu.png"); background-position: center center; background-size: 95%;}
-    #pay { margin-bottom: 1rem; }
+    .toggle { display: none; }
+    #pay { display: block; margin-bottom: 1rem; }
     #pay:nth-child(2) { margin-bottom: 2rem; }
     #pay:last-child { margin-bottom: 0; }
-    #price { margin-left: 56%; }
+    #price1 { margin-left: 60%; }
+    #price2 { margin-left: 65%; }
+    #price3 { margin-left: 68%; }
 
     /* 모바일 */
     @media screen and (max-width:767px) {
       body, html { margin: 0; padding: 0; }
-      .player .viewer { min-width:320px; width:auto; }
+      .player .viewer { max-width:100vw; width:auto; }
     }
     /* 태블릿 */
     @media screen and (min-width:768px) and (max-width:959px){
       body, html { margin: 0; padding: 0; }
-      .player { min-width:768px; width:100vw; }
+      .player .viewer { max-width:100vw; width:auto; }
     }
     /* 데스크탑 */
     @media screen and (min-width:960px) {
       body, html { margin: 0; padding: 0; }
-      .player { min-width:960px; max-width:960px; width:auto; }
+      .player .viewer { max-width:100vw; width:auto; }
     }
     </style>
     <!-- Hotjar Tracking Code for my site -->
@@ -148,16 +151,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -189,26 +194,31 @@
                 <ul class="ui-grid-d">
                     <li class="ui-block-a">
                         <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">취소</span>
                             <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page2" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">구매</span>
                             <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page5" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">회원</span>
                             <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-d">
                         <a href="#page52" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">공지</span>
                             <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-e">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -217,161 +227,23 @@
         </header>
         <div data-role="content" class="ui-content">
             <h1 class="ui-title">Vitra</h1>
-            <ul class="ui-listview" data-role="listview">
-                <li class="ui-first-child">
-                    <a href="#page11" data-transition="slidefade">Products</a>
-                </li>
-                <li>
-                    <a href="#page12" data-transition="slidefade">Living</a>
-                </li>
-                <li>
-                    <a href="#page13" data-transition="slidefade">Magazine</a>
-                </li>
-            </ul>
-        </div>
-        <footer data-role="footer" class="ui-footer" data-theme="a">
-            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
-        </footer>
-    </div>
-    <!-- 서브메뉴이동(제품) -->
-    <div id="page11" data-role="page" class="ui-page ui-page-theme-a">
-        <header data-role="header" class="ui-header" data-theme="a">
-            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
-                <ul class="ui-grid-d">
-                    <li class="ui-block-a">
-                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-b">
-                        <a href="#page2" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-c">
-                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-d">
-                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-e">
-                        <a href="#page6" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div data-role="content" class="ui-content">
-            <a href="#page1"><h1 class="ui-title">BACK</h1></a>
-            <ul class="ui-listview" data-role="listview">
-                <li>
-                    <a href="#page2">Seating</a>
-                </li>
-                <li>
-                    <a href="#page2">Tables</a>
-                </li>
-            </ul>
-        </div>
-        <footer data-role="footer" class="ui-footer" data-theme="a">
-            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
-        </footer>
-    </div>
-    <!-- 서브메뉴이동(작품) -->
-    <div id="page12" data-role="page" class="ui-page ui-page-theme-a">
-        <header data-role="header" class="ui-header" data-theme="a">
-            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
-                <ul class="ui-grid-d">
-                    <li class="ui-block-a">
-                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-b">
-                        <a href="#page2" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-c">
-                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-d">
-                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-e">
-                        <a href="#page6" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div data-role="content" class="ui-content">
-            <a href="#page1"><h1 class="ui-title">BACK</h1></a>
-            <ul class="ui-listview" data-role="listview">
-                <li class="ui-first-child">
-                    <a href="#page3">Collection1</a>
-                </li>
-                <li>
-                    <a href="#page3">Collection2</a>
-                </li>
-            </ul>
-        </div>
-        <footer data-role="footer" class="ui-footer" data-theme="a">
-            <h5 class="ui-title" role="heading">COPYRIGHT</h5>
-        </footer>
-    </div>
-    <!-- 서브메뉴이동(정보) -->
-    <div id="page13" data-role="page" class="ui-page ui-page-theme-a">
-        <header data-role="header" class="ui-header" data-theme="a">
-            <nav data-role="navbar" data-grid="d" role="navigation" class="nav-glyphish-example ui-navbar">
-                <ul class="ui-grid-d">
-                    <li class="ui-block-a">
-                        <a href="#page0" data-icon="delete" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-b">
-                        <a href="#page2" data-icon="tag" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-tag ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-c">
-                        <a href="#page4" data-icon="user" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-user ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-d">
-                        <a href="#page5" data-icon="mail" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-mail ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                    <li class="ui-block-e">
-                        <a href="#page6" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <div data-role="content" class="ui-content">
-            <a href="#page1" data-transition="slidefade"><h1 class="ui-title">BACK</h1></a>
-            <ul class="ui-listview" data-role="listview">
-                <li class="ui-first-child">
-                    <a href="#page4">Exhibitions</a>
-                </li>
-                <li>
-                    <a href="#page4">Designers</a>
-                </li>
-            </ul>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" data-inset="false" data-iconpos="right">
+                    <h2>Products</h2><br>
+                    <a href="#page2" data-transition="slidefade">Seating</a><br><br>
+                    <a href="#page2" data-transition="slidefade">Tables</a><br><br>
+                </div>
+                <div data-role="collapsible" data-inset="false" data-iconpos="right">
+                    <h2>Living</h2><br>
+                    <a href="#page3">Collection1</a><br><br>
+                    <a href="#page3">Collection2</a><br><br>
+                </div>
+                <div data-role="collapsible" data-inset="false" data-iconpos="right">
+                    <h2>Magazine</h2><br>
+                    <a href="#page4">Exhibitions</a><br><br>
+                    <a href="#page4">Designers</a><br><br>
+                </div>
+            </div>
         </div>
         <footer data-role="footer" class="ui-footer" data-theme="a">
             <h5 class="ui-title" role="heading">COPYRIGHT</h5>
@@ -384,16 +256,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -467,16 +341,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -507,16 +383,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -547,16 +425,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -591,16 +471,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -634,16 +516,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -677,16 +561,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -721,16 +607,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -759,16 +647,18 @@
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -792,21 +682,23 @@
     </div>
     <!-- 메인메뉴(회원 - 로그인) -->
     <div id="page5" data-role="page" class="ui-page ui-page-theme-a">
-        <header data-role="header" class="ui-header" data-theme="a">
+        <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -825,13 +717,12 @@
                         <label for="pw">Password</label>
                         <input type="password" name="pw" id="pw" placeholder="비밀번호"><br>
                     </li>
-                    
                 </ul>
             </div>
             <div class="ui-btn-group">
                 <button type="reset" class="ui-btn ui-btn-inline">취소</button>
                 <button type="submit" class="ui-btn ui-btn-inline ui-btn-b">로그인</button>
-                <a href="#page51">회원가입</a>
+                <a href="#page51" class="ui-btn ui-btn-inline ui-btn-b">회원가입</a>
             </div>
         </div>
         <footer data-role="footer" class="ui-footer" data-theme="a">
@@ -842,25 +733,25 @@
     <div id="page51" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
-                <form>
-                    <ul class="ui-grid-b">
-                        <li class="ui-block-a">
-                            <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
-                                <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
-                            </a>
-                        </li>
-                        <li class="ui-block-b">
-                            <a href="#page0" data-theme="a">
-                                <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
-                            </a>
-                        </li>
-                        <li class="ui-block-c">
-                            <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
-                                <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </form>
+                <ul class="ui-grid-b">
+                    <li class="ui-block-a">
+                        <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
+                            <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                    <li class="ui-block-b">
+                        <a href="#page0" data-theme="a">
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                        </a>
+                    </li>
+                    <li class="ui-block-c">
+                        <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
+                            <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <div data-role="content" class="ui-content">
@@ -923,16 +814,18 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -981,16 +874,18 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -1037,16 +932,18 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -1085,16 +982,18 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
                 <ul class="ui-grid-b">
                     <li class="ui-block-a">
                         <a href="#page1" data-icon="bars" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a ui-first-child">
+                            <span class="ui-text">메뉴</span>
                             <span class="ui-icon ui-icon-bars ui-icon-shadow"></span>
                         </a>
                     </li>
                     <li class="ui-block-b">
                         <a href="#page0" data-theme="a">
-                            <svg width="86px" height="20px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
+                            <svg width="86px" height="35px" viewBox="0 0 91.928 30"><path fill="#000" d="M0 11.18h7.255l4.275 9.183 4.486-9.183h7.149l-9.463 17.979h-4.38L0 11.18zm22.991-6.799C22.991 1.962 24.954 0 27.407 0c2.418 0 4.346 1.962 4.346 4.381s-1.928 4.416-4.346 4.416a4.42 4.42 0 0 1-4.416-4.416zm.981 24.778V11.18h6.729v17.979h-6.729zM34.241 5.573h6.519v5.607h3.855v5.152H40.76v12.827h-6.589V16.367h-1.928V11.18h1.963l.035-5.607zm12.055 5.607h6.729l-.105 2.523s1.752-2.979 5.993-2.979c.245 0 .491 0 .736.035v6.099c-.524-.245-1.227-.386-1.962-.386-2.173 0-4.767 1.051-4.767 3.26v9.427h-6.624V11.18zm22.431-.596c2.278 0 4.486.912 6.064 2.489V11.18h6.062v17.979h-6.167s-.036-.56-.036-1.156c0-.279 0-.561.036-.806-1.473 1.822-3.681 2.698-5.959 2.698-5.677 0-9.042-4.977-9.042-9.708 0-4.276 2.769-8.341 7.184-9.392a8.352 8.352 0 0 1 1.858-.211zM75 20.257c0-2.417-1.962-4.346-4.381-4.346-2.418 0-4.451 1.928-4.451 4.346s2.033 4.452 4.451 4.452C73.038 24.708 75 22.675 75 20.257zm8.131 5.398c0-2.488 1.927-4.451 4.416-4.451 2.418 0 4.381 1.963 4.381 4.451 0 2.383-1.963 4.346-4.381 4.346-2.489-.001-4.416-1.963-4.416-4.346z"></path></svg>
                         </a>
                     </li>
                     <li class="ui-block-c">
                         <a href="#page55" data-icon="shop" data-theme="a" class="ui-btn ui-btn-icon-top ui-btn-up-a">
+                            <span class="ui-text">장바구니</span>
                             <span class="ui-icon ui-icon-shop ui-icon-shadow"></span>
                         </a>
                     </li>
@@ -1122,9 +1021,9 @@ I'm a basic textarea. If this is pre-populated with content, the height will be 
             <ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
                 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child">payment</li>
                 <li>
-                    <div id="pay"><span><strong>Subtotal</strong></span><span id="price">$ 1,270.00</span></div>
-                    <div id="pay"><span><strong>Shipping</strong></span><span id="price">$ 30.00</span></div>
-                    <div id="pay"><span><strong>Total</strong></span><span id="price">$ 1,300.00</span></div>
+                    <div id="pay"><span><strong>Subtotal</strong></span><span id="price1">$ 1,270.00</span></div>
+                    <div id="pay"><span><strong>Shipping</strong></span><span id="price2">$ 30.00</span></div>
+                    <div id="pay"><span><strong>Total</strong></span><span id="price3">$ 1,300.00</span></div>
                 </li>
             </ul>
             <div class="btn-groups">
