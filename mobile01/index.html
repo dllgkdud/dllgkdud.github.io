@@ -171,10 +171,25 @@
             </nav>
         </header>
         <div class="player">
-            <video class="player_video viewer" src="./vdo/2018.mp4" id="target_vdo"></video>
+            <video class="player_video viewer" class="video-js">
+                <source src="./vdo/2018.mp4" id="target_vdo">
+            </video>
             <button class="player_button toggle" title="Toggle Play">►</button>
         </div>
+        <!--<div class="vdo_lst" id="vdo_lst">
+            <ul>
+                <li><span data-val="./vdo/2018.mp4">Interior</span></li>
+                <li><span data-val="./vdo/Standard.mp4">Product</span></li>
+            </ul>
+         </div>-->
         <script src="./assets/js/custom_video.js"></script>
+        <!--<script>
+        $(document).ready(function(){
+            $("#btn_lst li span").click(function(){
+                $(".viewer").attr("src", $(this).attr("data-val"));
+            });
+        }
+        </script>-->
         <div data-role="contenter" class="ui-content">
             <div role="main" class="ui-content">
                 <h2>Home Stories</h2>

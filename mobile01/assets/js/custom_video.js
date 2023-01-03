@@ -20,6 +20,5 @@ function updateButton() {
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 
-
 // 토글버튼 기능 이벤트 핸들러
 toggle.addEventListener('click', togglePlay);  
