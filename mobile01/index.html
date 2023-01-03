@@ -44,14 +44,14 @@
 
     <!-- 앱 미리보기 설정 -->
     <!-- iOS -->
-    <!--<meta property="al:ios:url" content="ios 앱 URL" />
-    <meta property="al:ios:app_store_id" content="ios 앱스토어 ID" />
-    <meta property="al:ios:app_name" content="ios 앱 이름" />-->
+    <meta property="al:ios:url" content="https://apps.apple.com/kr/app/ikea/id1452164827" />
+    <meta property="al:ios:app_store_id" content="1452164827" />
+    <meta property="al:ios:app_name" content="Vitra" />
     <!-- Android -->
-    <!--<meta property="al:android:url" content="안드로이드 앱 URL" />
-    <meta property="al:android:app_name" content="안드로이드 앱 이름" />
-    <meta property="al:android:package" content="안드로이드 패키지 이름" />
-    <meta property="al:web:url" content="안드로이드 앱 URL" />-->
+    <meta property="al:android:url" content="https://play.google.com/store/apps/details?id=com.ingka.ikea.app" />
+    <meta property="al:android:app_name" content="Vitra" />
+    <meta property="al:android:package" content="com.ingka.ikea.app" />
+    <meta property="al:web:url" content="https://play.google.com/store/apps/details?id=com.ingka.ikea.app" />
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Vitra | Home">
@@ -120,17 +120,23 @@
     @media screen and (max-width:767px) {
       body, html { margin: 0; padding: 0; }
       .player .viewer { max-width:100vw; width:auto; }
+      #banner img { max-width:100vw; width:auto; }
     }
     /* 태블릿 */
     @media screen and (min-width:768px) and (max-width:959px){
       body, html { margin: 0; padding: 0; }
       .player .viewer { max-width:100vw; width:auto; }
+      #banner img { max-width:100vw; width:auto; }
     }
     /* 데스크탑 */
     @media screen and (min-width:960px) {
       body, html { margin: 0; padding: 0; }
       .player .viewer { max-width:100vw; width:auto; }
+      #banner img { max-width:100vw; width:auto; }
     }
+
+    /* 미디어 쿼리 */
+    
     </style>
     <!-- Hotjar Tracking Code for my site -->
     <script>
@@ -290,7 +296,9 @@
                 </ul>
             </nav>
         </header>
-        <img src="./assets/img/products-480.jpg" alt="products">
+        <div id="banner">
+            <img src="./assets/img/products-1440.jpg" alt="products">
+        </div>
         <div data-role="content" class="ui-content">
             <h1 class="ui-title">Products</h1>
             <div role="main" class="ui-content">
@@ -434,7 +442,7 @@
             <h5 class="ui-title" role="heading">COPYRIGHT</h5>
         </footer>
     </div>
-    <!-- 메인메뉴(작품) -->
+    <!-- 메인메뉴(리빙) -->
     <div id="page3" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
@@ -459,7 +467,9 @@
                 </ul>
             </nav>
         </header>
-        <img src="./assets/img/living-1440.jpg" alt="title">
+        <div id="banner">
+            <img src="./assets/img/living-1440.jpg" alt="living">
+        </div>
         <div data-role="content" class="ui-content">
             <h1 class="ui-title">living</h1>
             <div role="main" class="ui-content">
@@ -480,7 +490,7 @@
             <h5 class="ui-title" role="heading">COPYRIGHT</h5>
         </footer>
     </div>
-    <!-- 서브메뉴(작품1) 상세 -->
+    <!-- 서브메뉴(리빙1) 상세 -->
     <div id="page31" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
@@ -525,7 +535,7 @@
             <h5 class="ui-title" role="heading">COPYRIGHT</h5>
         </footer>
     </div>
-    <!-- 서브메뉴(작품2) 상세 -->
+    <!-- 서브메뉴(리빙2) 상세 -->
     <div id="page32" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
@@ -570,7 +580,7 @@
             <h5 class="ui-title" role="heading">COPYRIGHT</h5>
         </footer>
     </div>
-    <!-- 메인메뉴(정보) -->
+    <!-- 메인메뉴(잡지) -->
     <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
         <header data-role="header" class="ui-header" data-theme="a" data-position="fixed">
             <nav data-role="navbar" data-grid="b" role="navigation" class="nav-glyphish-example ui-navbar">
@@ -595,7 +605,9 @@
                 </ul>
             </nav>
         </header>
-        <img src="./assets/img/magazine-450.jpg" alt="title">
+        <div id="banner">
+            <img src="./assets/img/magazine-450.jpg" alt="magazine">
+        </div>
         <div data-role="content" class="ui-content">
             <h1 class="ui-title">Magazine</h1>
             <div role="main" class="ui-content">
